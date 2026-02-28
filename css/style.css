@@ -478,7 +478,7 @@ body {
 }
 
 .tag-yellow {
-  background: rgb(228, 171, 27);
+  background: #e4ab1b;
   color: var(--text);
 }
 
