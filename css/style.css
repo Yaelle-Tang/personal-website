@@ -407,7 +407,7 @@ body {
 
 /* Writing cards — narrower image */
 .writing-card .card-img-col {
-  width: 200px;
+  width: 40%;
 }
 
 .writing-card .card-placeholder {
@@ -476,6 +476,12 @@ body {
   background: var(--green);
   color: #F7F5F0;
 }
+
+.tag-yellow {
+  background: rgb(228, 171, 27);
+  color: var(--text);
+}
+
 
 .tag-dark {
   background: var(--text);
