@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Richmond's Tree Canopy Gap — Yaelle Tang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/subpage.css">
+</head>
+
+<body>
+
+  <div class="cursor" id="cursor"></div>
+
+  <!-- NAV (same as index) -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container-fluid px-5">
+      <a class="navbar-brand" href="../index.html"><span>Yaelle </span>Tang</a>
+      <div class="d-flex gap-1 align-items-center">
+        <a class="nav-link" href="../index.html#scrolly">Scrollytelling</a>
+        <a class="nav-link" href="../index.html#dataviz">Data Viz</a>
+        <a class="nav-link" href="../index.html#analysis">Data Analysis</a>
+        <a class="nav-link" href="../index.html#writing">Writing</a>
+        <a class="nav-link hi" href="../index.html#about">More</a>
+        <a class="nav-link hi" href="../resume.pdf" target="_blank">Resume↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       PROJECT HERO
+  ═══════════════════════════════════════ -->
+  <section class="project-hero mt-5">
+    <div class="container-fluid px-5">
+
+      <!-- back link -->
+      <div class="mb-2">
+        <a href="../index.html#analysis" class="back-link">
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+            <path d="M6 1L1 6L6 11M15 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+          Back to all projects
+        </a>
+      </div>
+
+      <div class="row align-items-stretch justify-content-center">
+
+        <!-- Top Summary -->
+        <div class="col-lg-8 d-flex flex-column justify-content-center">
+          <div class="project-eyebrow">Data Analysis · Data Viz · Environmental Equity</div>
+          <h1 class="project-title">Richmond's Tree Canopy Gap</h1>
+          <p class="project-summary">
+            Richmond's last tree inventory was completed 12 years ago. Using five datasets and Python,
+            I mapped how canopy gaps fall hardest on low-income neighborhoods and communities of color — analysis that
+            informed a published investigation into the city's $1M grant to rebuild its urban forestry system.
+          </p>
+          <div class="project-hero-tags">
+            <span class="tag tag-red">Python</span><span class="tag tag-green">Datawrapper</span><span
+              class="tag tag-green">GIS mapping</span><span class="tag tag-yellow">Google Sheets</span>
+          </div>
+        </div>
+
+        <!-- buttons -->
+        <div class="col-2 flex-wrap justify-content-center align-items-center  d-lg-flex">
+          <a href="https://richmondconfidential.org/2025/12/08/richmond-stopped-keeping-track-of-its-trees-but-a-grant-funded-plan-is-in-place-to-change-that/"
+            target="_blank" class="project-cta">
+            Read the story
+            <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+              <path d="M9 1L13 5L9 9M1 5H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </a>
+          <a href="#methodology" class="project-cta">
+            Methodology
+            <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
+              <path d="M9 1L13 5L9 9M1 5H13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Center: viz carousel -->
+        <div class="col-6">
+          <div class="viz-carousel mb-5">
+            <div class="viz-tabs">
+              <button class="viz-tab active" data-panel="0">Canopy Distribution</button>
+              <button class="viz-tab" data-panel="1">Race & Canopy</button>
+              <button class="viz-tab" data-panel="2">Poverty & Canopy</button>
+              <button class="viz-tab" data-panel="3">Tree Equity Score</button>
+            </div>
+
+            <div class="viz-panels">
+
+              <div class="viz-panel active">
+                <div style="min-height:620px" id="datawrapper-vis-aju9N">
+                  <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/aju9N/embed.js"
+                    charset="utf-8" data-target="#datawrapper-vis-aju9N"></script><noscript><img
+                      src="https://datawrapper.dwcdn.net/aju9N/full.png"
+                      alt="Tree Canopy Distribution in Richmond, California (Choropleth map)" /></noscript>
+                </div>
+              </div>
+
+              <div class="viz-panel">
+                <div style="min-height:620px" id="datawrapper-vis-Zy8aP">
+                  <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/Zy8aP/embed.js"
+                    charset="utf-8" data-target="#datawrapper-vis-Zy8aP"></script><noscript><img
+                      src="https://datawrapper.dwcdn.net/Zy8aP/full.png"
+                      alt="Percent Population of Color, Richmond, CA (Choropleth map)" /></noscript>
+                </div>
+              </div>
+
+              <div class="viz-panel">
+                <div style="min-height:620px" id="datawrapper-vis-WIQZA">
+                  <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/WIQZA/embed.js"
+                    charset="utf-8" data-target="#datawrapper-vis-WIQZA"></script><noscript><img
+                      src="https://datawrapper.dwcdn.net/WIQZA/full.png"
+                      alt="Percent Population of Poverty, Richmond, California (Choropleth map)" /></noscript>
+                </div>
+              </div>
+
+              <div class="viz-panel">
+                <div style="min-height:495px" id="datawrapper-vis-1i9bp">
+                  <script type="text/javascript" defer src="https://datawrapper.dwcdn.net/1i9bp/embed.js"
+                    charset="utf-8" data-target="#datawrapper-vis-1i9bp"></script><noscript><img
+                      src="https://datawrapper.dwcdn.net/1i9bp/full.png"
+                      alt="Richmond’s Tree Equity Score Below the County Average (Column Chart)" /></noscript>
+                </div>
+              </div>
+
+            </div>
+            <!-- <div class="viz-caption" id="vizCaption">
+              Tree canopy percentage by census block group · Source: American Forests / Google Environmental Insights
+              Explorer · Map: Yaelle Tang
+            </div> -->
+          </div>
+        </div><!-- viz carousel -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       METHODOLOGY
+  ═══════════════════════════════════════ -->
+  <section class="subpage-section container-fluid px-5 justify-content-center row" id="methodology">
+    <div class="col-lg-8 col-12 px-5">
+      <div class="section-label">// methodology</div>
+      <h2 class="section-title">Data & process</h2>
+      <p class="section-body">
+        I obtained Richmond's full tree inventory dataset from the city's data portal,
+        <a href="https://www.transparentrichmond.org/Environmental-and-Health-Initiatives/Richmond-Urban-Forestry-Inventory/pev4-ymun/data_preview"
+          target="_blank">Transparent Richmond</a>.
+        This dataset includes fields such as species, location, condition, last survey date, and so on.
+        To confirm whether the dataset was still actively maintained, I interviewed Parks Maintenance
+        Superintendent, and he explained that the city no longer routinely updates this data.
+      </p>
+
+      <p class="section-body">
+        I downloaded the dataset and used Python to keep only the columns I needed (having too many
+        fields made Google Sheets lag). Then I imported the trimmed file into Google Sheets to filter
+        and clean it. I removed all rows without latitude or longitude and ended up with
+        35,584 valid records.
+      </p>
+
+      <!-- Code screenshot -->
+      <div class="code-block">
+        <div class="code-label">Python · data cleaning</div>
+        <pre>import pandas as pd
+
+df = pd.read_csv("Richmond_Urban_Forestry_Inventory.csv")
+
+keep_cols = [
+    "Tree Number", "Species",
+    "Lat", "Long", "Condition",
+    "New Georeferenced Column"
+]
+
+df_clean = df[keep_cols].copy()
+
+# remove rows without coordinates
+df_clean = df_clean.dropna(subset=["Lat", "Long"])
+
+print(f"{len(df_clean)} valid records")
+
+df_clean.to_csv("richmond_trees_clean.csv", index=False)</pre>
+      </div>
+
+      <p class="section-body">I also used external datasets for cross-checking:</p>
+
+      <ul class="section-body">
+        <li>Climate Smart Richmond: <a href="https://experience.arcgis.com/experience/a5e95bc3fc984f3c8a7b719e3e4b8ab1"
+            target="_blank">Climate-Smart Cities Richmond: Planning and GIS</a></li>
+        <li>Tree Equity Score (from American Forests): <a
+            href="https://www.treeequityscore.org/insights/place/richmond-ca" target="_blank">treeequityscore.org</a>
+        </li>
+        <liEJScree (from EPA, but no longer used because the Trump administration ended the Environmental Justice Order
+          in February): <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/LIXQMD"
+          target="_blank">Environmental Justice Mapping and Screening Tool (EJScreen) — Harvard Dataverse</a></li>
+      </ul>
+
+      <p class="section-body">
+        All of these platforms provided downloadable, original datasets along with methodological
+        documentation. I reviewed their methodologies and extracted the specific variables I needed
+        using Python. For example, I got tree canopy data from American Forests. The canopy data was
+        donated by Google and derived from the Google Environmental Insights Explorer, which offered
+        high-resolution tree canopy estimates aggregated at the Census block group level.
+      </p>
+
+      <p class="section-body">
+        I downloaded Richmond's block group shapefile from
+        <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html"
+          target="_blank">TIGER/Line Shapefiles</a>
+        and imported both the map and the datasets into Datawrapper. I then used geocoding to match
+        block group GEOIDs with the canopy and demographic datasets. I also downloaded population and
+        socioeconomic indicators from EJScreen and found that areas with the lowest canopy coverage
+        strongly overlapped with neighborhoods that are predominantly people of color and low-income.
+      </p>
+
+      <p class="section-body">
+        To understand how reliable the dataset was and why the gaps existed, I also spoke with
+        UC Berkeley professor emerita Jennifer Wolch, an expert on urban planning
+        and urban greening.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       THE STORY BEHIND THE STORY
+  ═══════════════════════════════════════ -->
+  <section class="subpage-section container-fluid px-5 justify-content-center row" id="methodology">
+    <div class="col-lg-8 col-12 px-5">
+      <div class="section-label">// Inspiration</div>
+      <h2 class="section-title">THE STORY BEHIND THE STORY</h2>
+      <p class="section-body">
+        I started by doing clip searches. Richmondside published an entire series called
+        <a href="https://richmondside.org/topics/whats-fueling-richmonds-air-pollution/" target="_blank">
+          "What's fueling Richmond's air pollution?"</a> and I read almost every story in it to understand
+        the environmental context for Richmond's canopy disparities. I also looked at past Richmond
+        Confidential coverage, including previous Arbor Day reporting, to see how the city and community
+        groups have talked about tree equity in the past.
+      </p>
+
+      <p class="section-body">
+        Then, I tried to make connections between communities. I talked with residents at the Arbor Day
+        event, joined the volunteers, and even planted my first tree in Richmond (which actually became
+        my first personal connection to the city's urban forestry issues). I also established a
+        relationship with Groundwork Richmond and stayed in touch with their director, who helped me
+        understand the nonprofit side of tree planting and the challenges of working in neighborhoods
+        with historically low canopy.
+      </p>
+
+      <p class="section-body">
+        After that, I also attended the Urban Forest Advisory Committee meeting and multiple City Council
+        discussions to follow funding decisions and hear how staff framed the issue.
+      </p>
+
+      <p class="section-body">
+        While reading a previous article about
+        <a href="https://richmondconfidential.org/2021/04/22/environmentalists-push-to-expand-richmonds-urban-forest/"
+          target="_blank">
+          equitable tree coverage in Richmond</a>, I came across Professor Jennifer Wolch's work.
+        Following that clue, I researched her academic background and eventually interviewed her, which
+        gave me a statewide perspective on why cities struggle with maintaining accurate tree inventories.
+      </p>
+      <p class="section-body">I’m a little bit frustrated because much of this analysis and visualization did not appear
+        in the final
+        published story due to length, but I still think this investigative process is meaningful because it informed my
+        reporting and confirmed the gap between existing records and residents’ lived experiences.</p>
+    </div>
+  </section>
+
+
+
+  <!-- ═══════════════════════════════════════
+       LESSONS LEARNED
+  ═══════════════════════════════════════ -->
+  <section class="subpage-section container-fluid px-5 justify-content-center row" id="lessons">
+    <div class="col-lg-8 col-12 px-5">
+      <div class="section-label">// Takeaways</div>
+      <h2 class="section-title">WHAT I LEARNED</h2>
+      <p class="section-body">
+        <span>Start early</span>, and take time to see what reporters before you have already done. Talk to as many
+        people as you can. Most sources and experts are surprisingly generous, and they can help you find
+        your direction much faster than trying to figure everything out alone.
+      </p>
+
+      <p class="section-body">
+        <span>Don't get lost in data analysis too early.</span>It's better to have a general idea of the story first
+        and then talk to people so you know what data actually matters. Otherwise, you can end up doing a
+        lot of unnecessary work — which is a lesson I definitely learned the hard way.
+      </p>
+
+      <p class="section-body">
+        I am on the data beat, and at first it was honestly confusing. I didn't know how to connect all
+        the datasets to real local stories, and I spent a lot of time analyzing numbers that didn't end up
+        being useful. What I learned is that you should <span>always find the story first</span> —
+        talk to people, go out into the community, and humanize all the abstract data. That will help you
+        figure out what data you actually need.
+      </p>
+
+      <p class="section-body">
+        <span>Go to meetings — especially the small committee meetings.</span> Richmond has a lot of
+        them, and important information is often shared informally before it ever shows up in City Council
+        agendas. Build relationships early with city staff and community groups; they can give you context
+        you won't find in any dataset.
+      </p>
+
+      <p class="section-body">
+        And <span>don't underestimate residents.</span> Someone living next to a dying tree can teach you just as much
+        as a city official.
+      </p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER NAV
+  ═══════════════════════════════════════ -->
+  <div class="container-fluid px-5">
+    <div class="subpage-footer-nav">
+      <a href="../index.html" class="back-link">
+        <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+          <path d="M6 1L1 6L6 11M15 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+        All projects
+      </a>
+      <!-- <div class="text-end">
+        <div class="footer-nav-label">Next project</div>
+        <a href="ai-papers.html" class="footer-nav-title">2.78 Million AI Papers →</a>
+      </div> -->
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container-fluid px-5 d-flex justify-content-between align-items-center">
+      <div class="footer-copy">© 2025 <span>Yaelle Tang</span></div>
+      <div>
+        <a class="footer-link" href="mailto:yueyang_tang@berkeley.edu">Email</a>
+        <a class="footer-link" href="https://www.linkedin.com/in/yaelle-yueyang-tang" target="_blank">LinkedIn</a>
+        <a class="footer-link" href="https://github.com/Yaelle-Tang" target="_blank">GitHub</a>
+        <a class="footer-link" href="https://www.instagram.com/yaelle_tyy/" target="_blank">Instagram</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    // Viz carousel tabs
+    const tabs = document.querySelectorAll('.viz-tab');
+    const panels = document.querySelectorAll('.viz-panel');
+    const caption = document.getElementById('vizCaption');
+
+    const captions = [
+      "Tree canopy percentage by census block group · Source: American Forests / Google Environmental Insights Explorer · Map: Yaelle Tang",
+      "Percent population of color overlaid with canopy coverage · Source: American Community Survey 2021 · Map: Yaelle Tang",
+      "Poverty rate overlaid with canopy coverage · Source: American Community Survey 2021 · Map: Yaelle Tang",
+      "Richmond's Tree Equity Score compared to county average · Source: American Forests Tree Equity Score · Chart: Yaelle Tang"
+    ];
+
+    tabs.forEach((tab, i) => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        panels.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        panels[i].classList.add('active');
+        caption.textContent = captions[i];
+      });
+    });
+  </script>
+
+</body>
+
+</html>
