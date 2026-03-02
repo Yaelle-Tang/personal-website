@@ -18,7 +18,7 @@
 
   <div class="cursor" id="cursor"></div>
 
-  <!-- NAV (same as index) -->
+  <!-- NAV -->
   <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container-fluid px-5">
       <a class="navbar-brand" href="../index.html"><span>Yaelle </span>Tang</a>
@@ -28,7 +28,7 @@
         <a class="nav-link" href="../index.html#analysis">Data Analysis</a>
         <a class="nav-link" href="../index.html#writing">Writing</a>
         <a class="nav-link hi" href="../index.html#about">More</a>
-        <a class="nav-link hi" href="../resume.pdf" target="_blank">Resume↗</a>
+        <a class="nav-link hi" href="../Resume_YaelleTang.pdf" target="_blank">Resume↗</a>
       </div>
     </div>
   </nav>
@@ -36,12 +36,12 @@
   <!-- ═══════════════════════════════════════
        PROJECT HERO
   ═══════════════════════════════════════ -->
-  <section class="project-hero mt-5">
+  <section class="project-hero">
     <div class="container-fluid px-5">
 
       <!-- back link -->
       <div class="mb-2">
-        <a href="../index.html#analysis" class="back-link">
+        <a href="../index.html" class="back-link">
           <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
             <path d="M6 1L1 6L6 11M15 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
           </svg>
@@ -52,7 +52,7 @@
       <div class="row align-items-stretch justify-content-center">
 
         <!-- Top Summary -->
-        <div class="col-lg-8 d-flex flex-column justify-content-center">
+        <div class="col-lg-8 col-12 d-flex flex-column justify-content-center">
           <div class="project-eyebrow">Data Analysis · Data Viz · Environmental Equity</div>
           <h1 class="project-title">Richmond's Tree Canopy Gap</h1>
           <p class="project-summary">
@@ -67,7 +67,7 @@
         </div>
 
         <!-- buttons -->
-        <div class="col-2 flex-wrap justify-content-center align-items-center  d-lg-flex">
+        <div class="col-lg-2 d-lg-flex col-8 mb-3 flex-wrap justify-content-center align-items-center ">
           <a href="https://richmondconfidential.org/2025/12/08/richmond-stopped-keeping-track-of-its-trees-but-a-grant-funded-plan-is-in-place-to-change-that/"
             target="_blank" class="project-cta">
             Read the story
@@ -84,7 +84,7 @@
         </div>
 
         <!-- Center: viz carousel -->
-        <div class="col-6">
+        <div class="col-lg-8 col-12">
           <div class="viz-carousel mb-5">
             <div class="viz-tabs">
               <button class="viz-tab active" data-panel="0">Canopy Distribution</button>
@@ -197,9 +197,9 @@ df_clean.to_csv("richmond_trees_clean.csv", index=False)</pre>
         <li>Tree Equity Score (from American Forests): <a
             href="https://www.treeequityscore.org/insights/place/richmond-ca" target="_blank">treeequityscore.org</a>
         </li>
-        <liEJScree (from EPA, but no longer used because the Trump administration ended the Environmental Justice Order
+        <li>EJScree (from EPA, but no longer used because the Trump administration ended the Environmental Justice Order
           in February): <a href="https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/LIXQMD"
-          target="_blank">Environmental Justice Mapping and Screening Tool (EJScreen) — Harvard Dataverse</a></li>
+            target="_blank">Environmental Justice Mapping and Screening Tool (EJScreen) — Harvard Dataverse</a></li>
       </ul>
 
       <p class="section-body">
@@ -231,7 +231,7 @@ df_clean.to_csv("richmond_trees_clean.csv", index=False)</pre>
   <!-- ═══════════════════════════════════════
        THE STORY BEHIND THE STORY
   ═══════════════════════════════════════ -->
-  <section class="subpage-section container-fluid px-5 justify-content-center row" id="methodology">
+  <section class="subpage-section container-fluid px-5 justify-content-center row">
     <div class="col-lg-8 col-12 px-5">
       <div class="section-label">// Inspiration</div>
       <h2 class="section-title">THE STORY BEHIND THE STORY</h2>
@@ -316,24 +316,6 @@ df_clean.to_csv("richmond_trees_clean.csv", index=False)</pre>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       FOOTER NAV
-  ═══════════════════════════════════════ -->
-  <div class="container-fluid px-5">
-    <div class="subpage-footer-nav">
-      <a href="../index.html" class="back-link">
-        <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
-          <path d="M6 1L1 6L6 11M15 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
-        </svg>
-        All projects
-      </a>
-      <!-- <div class="text-end">
-        <div class="footer-nav-label">Next project</div>
-        <a href="ai-papers.html" class="footer-nav-title">2.78 Million AI Papers →</a>
-      </div> -->
-    </div>
-  </div>
-
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container-fluid px-5 d-flex justify-content-between align-items-center">
@@ -353,14 +335,14 @@ df_clean.to_csv("richmond_trees_clean.csv", index=False)</pre>
     // Viz carousel tabs
     const tabs = document.querySelectorAll('.viz-tab');
     const panels = document.querySelectorAll('.viz-panel');
-    const caption = document.getElementById('vizCaption');
+    // const caption = document.getElementById('vizCaption');
 
-    const captions = [
-      "Tree canopy percentage by census block group · Source: American Forests / Google Environmental Insights Explorer · Map: Yaelle Tang",
-      "Percent population of color overlaid with canopy coverage · Source: American Community Survey 2021 · Map: Yaelle Tang",
-      "Poverty rate overlaid with canopy coverage · Source: American Community Survey 2021 · Map: Yaelle Tang",
-      "Richmond's Tree Equity Score compared to county average · Source: American Forests Tree Equity Score · Chart: Yaelle Tang"
-    ];
+    // const captions = [
+    //   "Tree canopy percentage by census block group · Source: American Forests / Google Environmental Insights Explorer · Map: Yaelle Tang",
+    //   "Percent population of color overlaid with canopy coverage · Source: American Community Survey 2021 · Map: Yaelle Tang",
+    //   "Poverty rate overlaid with canopy coverage · Source: American Community Survey 2021 · Map: Yaelle Tang",
+    //   "Richmond's Tree Equity Score compared to county average · Source: American Forests Tree Equity Score · Chart: Yaelle Tang"
+    // ];
 
     tabs.forEach((tab, i) => {
       tab.addEventListener('click', () => {

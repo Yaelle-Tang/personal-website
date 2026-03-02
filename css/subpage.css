@@ -31,11 +31,16 @@ body {
 /* ── PROJECT HERO ── */
 .project-hero {
   height: max-content;
-  min-height: 130vh;
   display: flex;
-  align-items: center;
   padding-top: 10px;
   border-bottom: 1px solid var(--border);
+  padding-top: 48px;
+}
+
+@media (min-width: 768px) {
+  .project-hero {
+    padding-top: 80px;
+  }
 }
 
 .project-hero-inner {
@@ -105,6 +110,7 @@ body {
   text-decoration: none;
   border: 1.5px solid var(--text);
   transition: background .2s, border-color .2s;
+  margin: 10px auto;
 }
 
 .project-cta:hover {
@@ -118,7 +124,7 @@ body {
   position: relative;
   background: var(--surface);
   border: 1px solid var(--border);
-  aspect-ratio: 1/1.1;
+  aspect-ratio: 6/5;
   display: flex;
   flex-direction: column;
 }
@@ -300,8 +306,10 @@ body {
 .code-block {
   background: var(--text);
   padding: 20px 24px;
-  margin: 24px 0;
+  margin: 24px auto;
   overflow-x: auto;
+  width: 60%;
+  max-width: 500px;
 }
 
 .code-block pre {

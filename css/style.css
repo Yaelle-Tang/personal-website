@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
 
+/* 小于768px：整个navbar隐藏 */
+@media (max-width: 767px) {
+  #mainNav {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar-brand {
+    display: none !important;
+  }
+}
+
 :root {
   --bg: #F7F5F0;
   --surface: #EDEAE3;
@@ -316,14 +329,34 @@ body {
   background: rgba(200, 75, 47, .04);
 }
 
+.sidebar-chaper {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--border);
+  padding: 16px 12px 6px;
+}
+
 /* Work main */
 .work-main {
-  padding: 60px 48px 120px;
+  padding: 60px 48px 20px;
 }
 
 .work-block {
   margin-bottom: 72px;
   scroll-margin-top: 80px;
+}
+
+.chapter-title {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .block-header {
@@ -360,7 +393,8 @@ body {
   overflow: hidden;
   transition: transform .25s ease, box-shadow .25s ease;
   cursor: none;
-  height: 400px;
+  height: max-content;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -370,10 +404,24 @@ body {
 }
 
 .card-img-col {
-  width: 40%;
+  width: 100%;
+  aspect-ratio: 16/10;
   flex-shrink: 0;
   overflow: hidden;
 }
+
+@media (min-width: 992px) {
+  .project-card {
+    flex-direction: row;
+    /* 大屏：图左文右 */
+    height: 400px;
+  }
+
+  .card-img-col {
+    width: 40%;
+  }
+}
+
 
 .card-img-col img {
   width: 100%;
@@ -633,12 +681,27 @@ body {
 .about-body span {
   color: var(--text);
   font-weight: 600;
+  background: linear-gradient(180deg, transparent 60%, hsla(11, 62%, 48%, 0.656) 30%);
 }
 
 .about-body a {
-  color: var(--accent);
+  color: var(--muted);
   text-decoration: none;
   transition: color .2s;
+}
+
+.about-body a:hover {
+  color: var(--accent);
+}
+
+.hobby-list {
+  padding-left: 5px;
+  margin: 20px auto;
+  color: rgba(8, 7, 6, 0.304);
+  font-family: var(--serif);
+  font-size: 0.7rem;
+  list-style: none;
+  font-style: italic;
 }
 
 .skill-group {

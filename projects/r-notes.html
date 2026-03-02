@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R for Data Jounalism</title>
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Lora:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/subpage.css">
+</head>
+
+
+
+<body>
+
+  <div class="cursor" id="cursor"></div>
+
+  <!-- =====NAV===== -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container-fluid px-5">
+      <a class="navbar-brand" href="../index.html"><span>Yaelle </span>Tang</a>
+      <div class="d-flex gap-1 align-items-center">
+        <a class="nav-link" href="../index.html#scrolly">Scrollytelling</a>
+        <a class="nav-link" href="../index.html#dataviz">Data Viz</a>
+        <a class="nav-link" href="../index.html#analysis">Data Analysis</a>
+        <a class="nav-link" href="../index.html#writing">Writing</a>
+        <a class="nav-link hi" href="../index.html#about">More</a>
+        <a class="nav-link hi" href="../Resume_YaelleTang.pdf" target="_blank">Resume↗</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       PROJECT HERO
+  ═══════════════════════════════════════ -->
+  <section class="project-hero mt-5">
+    <div class="container-fluid px-5 mt-3">
+
+      <!-- back link -->
+      <div class="mb-2">
+        <a href="../index.html" class="back-link">
+          <svg width="16" height="12" viewBox="0 0 16 12" fill="none">
+            <path d="M6 1L1 6L6 11M15 6H1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+          Back to all projects
+        </a>
+      </div>
+
+      <div class="row align-items-stretch justify-content-center">
+        <!-- Top summary -->
+        <div class="col-lg-8 d-flex flex-column justify-content-center">
+          <div class="project-eyebrow">Learning R · Data Analysis</div>
+          <h1 class="project-title">Learning R for
+            Data Analysis in Journalism</h1>
+          <p class="project-summary">
+            I officially started to learn R in 2026 Spring (self taught a little bit before). This is the notes from
+            course <span>J298 Reporting Inequality with Data</span> at UC Berkeley's Graduate School of Journalism.
+          </p>
+          <div class="project-hero-tags">
+            <span class="tag tag-yellow">R</span><span class="tag tag-outline">ggplot2</span><span
+              class="tag tag-outline">dplyr</span><span class="tag tag-outline">tidyverse</span><span
+              class="tag tag-outline">tidycensus</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       Notes
+  ═══════════════════════════════════════ -->
+  <div class="work-section">
+    <div class="container-fluid px-2">
+      <div class="row g-0">
+
+        <!-- sticky sidebar -->
+        <div class="col-lg-2 d-none d-lg-block">
+          <div class="work-sidebar">
+            <span class="sidebar-label">// Outline</span>
+          </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="col-lg-10 col-12">
+          <div class="work-main">
+
+            <!-- ══════ CHAPTER 1 ══════ -->
+            <div class="work-block" id="c1-1">
+              <div class="chapter-title" id="c1">
+                Chapter 1
+              </div>
+              <div class="block-header">
+                <span class="block-title"> Setup & Packages</span>
+              </div>
+              <p class="section-body">
+                R uses <span>packages</span> to extend its capabilities — think of them like apps you install once
+                and open whenever you need them. The install step only happens once; the library step happens every
+                session.
+              </p>
+              <div class="code-block">
+                <div class="code-label">R · install once</div>
+                <pre>install.packages("tidyverse")  # data wrangling
+install.packages("dplyr")      # R's version of SQL
+install.packages("ggplot2")    # graphics
+install.packages("psych")      # descriptive stats
+install.packages("tidycensus") # census data API
+install.packages("janitor")    # data cleaning
+install.packages("modelr")     # regression helpers</pre>
+              </div>
+              <div class="code-block">
+                <div class="code-label">R · load every session</div>
+                <pre>library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(psych)
+library(tidycensus)
+library(janitor)
+library(modelr)</pre>
+              </div>
+              <p class="section-body"> Installing a package is like going to the hardware
+                store to buy a tool.
+                Using <code>library()</code> is getting it out of your toolbox. You don't go back to the store every
+                time you need it.</p>
+
+
+            </div>
+
+
+            <div class="work-block" id="c1-2">
+              <div class="block-header">
+                <span class="block-title">Loading Data</span>
+              </div>
+              <p class="section-body">
+                Everything in R lives in a <span>data frame</span> — a table with rows and columns. Use
+                <code>read_csv()</code> to load CSV files. The <code>&lt;-</code> arrow assigns the result to a name you
+                choose.
+              </p>
+              <div class="code-block">
+                <div class="code-label">R</div>
+                <pre>ind <- read_csv('globalind.csv', col_names = TRUE)
+view(ind)   # opens a spreadsheet-like viewer
+str(ind)    # shows structure: column types, row count</pre>
+              </div>
+              <p class="section-body">
+                The global indicator dataset has 222 rows (countries) and 10 columns including GNI, health expenditure,
+                education spending, unemployment rate, and maternal mortality. The first two columns are character
+                strings; the rest are numeric.
+              </p>
+            </div>
+
+            <div class="work-block" id="c1-3">
+              <div class="block-header">
+                <span class="block-title">Select & Filter</span>
+              </div>
+              <p class="section-body">
+                The <span>pipe operator</span> <code>%&gt;%</code> chains commands together — read it as "and then."
+                <code>select()</code> picks columns; <code>filter()</code> picks rows; <code>arrange()</code> sorts.
+              </p>
+              <div class="code-block">
+                <div class="code-label">R · select & sort</div>
+                <pre>ind %>%
+  select(country, code, gni) %>%
+  arrange(desc(gni))          # sort by GNI, highest first</pre>
+              </div>
+              <div class="code-block">
+                <div class="code-label">R · filter rows</div>
+                <pre>filter(ind, country == "United States")   # exact match
+filter(ind, gni > 60000)                  # numeric condition</pre>
+              </div>
+              <div class="code-block">
+                <div class="code-label">R · chain it all together</div>
+                <pre>ind %>%
+  select(country, code, gni, skulspend) %>%
+  filter(gni >= 50000) %>%
+  arrange(desc(skulspend))</pre>
+              </div>
+              <p class="section-body">
+                Shortcut for <code>%&gt;%</code>: <strong>Shift + Cmd + M</strong>
+              </p>
+            </div>
+
+            <div class="work-block" id="c1-4">
+              <div class="block-header">
+                <span class="block-title">Descriptives</span>
+              </div>
+              <p class="section-body">
+                Before running any statistics, understand your data's shape. Are the mean and median close? Is there
+                missing data? The <code>psych</code> package's <code>describe()</code> gives you everything at once.
+              </p>
+              <div class="code-block">
+                <div class="code-label">R</div>
+                <pre>mean(ind$gni, na.rm = TRUE)    # na.rm ignores missing values
+median(ind$gni, na.rm = TRUE)
+
+describe(ind)                  # mean, sd, min, max, skew...</pre>
+              </div>
+              <p class="section-body">
+                If you forget <code>na.rm = TRUE</code> and your data has missing values, R
+                will return <code>NA</code> instead of the actual result. Always add it when working with real-world
+                datasets.
+              </p>
+            </div>
+
+            <div class="work-block" id="c1-5">
+              <div class="block-header">
+                <span class="block-title">Correlation</span>
+              </div>
+              <p class="section-body">
+                A correlation tells you how strongly two variables move together — from -1 (perfect inverse) to +1
+                (perfect positive). Use <code>pairwise.complete.obs</code> to handle missing data gracefully.
+              </p>
+              <div class="code-block">
+                <div class="code-label">R · single correlation</div>
+                <pre>cor(ind$skul, ind$skulspend, use = "pairwise.complete.obs")</pre>
+              </div>
+              <div class="code-block">
+                <div class="code-label">R · correlation matrix (all variables)</div>
+                <pre>round(cor(ind[3:10], use = "pairwise.complete.obs"), 2)</pre>
+              </div>
+            </div>
+
+            <div class="work-block" id="c1-6">
+              <div class="block-header">
+                <span class="block-title">Histograms & Scatterplots</span>
+              </div>
+              <p class="section-body">
+                Visualizing before analyzing is essential — it shows you whether data is skewed, whether outliers exist,
+                and whether a relationship actually looks linear.
+              </p>
+              <div class="code-block">
+                <div class="code-label">R · histogram</div>
+                <pre>hist(ind$gni)
+hist(ind$healthexp)
+
+# Positively skewed? Try log transformation to normalize:
+hist(log10(ind$gni))</pre>
+              </div>
+              <div class="code-block">
+                <div class="code-label">R · scatterplot</div>
+                <pre>plot(ind$gni, ind$healthexp)   # X = independent, Y = dependent
+
+# Multiple variables at once:
+pairs(~ gni + healthexp + skul, data = ind)</pre>
+              </div>
+              <p class="section-body">
+                <span>On log transformation:</span> Taking <code>log10()</code> of a right-skewed variable can
+                normalize it and improve your model — but it makes results harder to explain to readers. Use it when the
+                math requires it, not by default.
+              </p>
+            </div>
+
+            <!-- ══════ CHAPTER 2 ══════ -->
+            <div class="work-block" id="c2-1">
+              <div class="chapter-titel" id="c2">
+                Chapter 2
+              </div>
+              <div class="block-header">
+                <span class="block-title">Regression Basics</span>
+              </div>
+              <p class="section-body">
+                Once you've identified a strong correlation, <span>linear regression</span> quantifies the
+                relationship — how much does Y change for every one-unit increase in X? In R, use <code>lm()</code>
+                (linear model). The formula reads: <span>dependent ~ independent</span>.
+              </p>
+              <div class="code-block">
+                <div class="code-label">R · run regression</div>
+                <pre>options(scipen = 999)   # turns off scientific notation
+
+ind_mod1 <- lm(formula = healthexp ~ gni, data = ind)
+summary(ind_mod1)</pre>
+              </div>
+              <div class="code-block">
+                <div class="code-label">R · multiple regression</div>
+                <pre>ind_mod2 <- lm(formula = healthexp ~ gni + unemp, data = ind)
+summary(ind_mod2)</pre>
+              </div>
+            </div>
+
+            <div class="work-block" id="c2-2">
+              <div class="block-header">
+                <span class="block-title"> Reading the Output</span>
+              </div>
+              <p class="section-body">
+                The <code>summary()</code> output has a lot going on. Here's what to focus on:
+              </p>
+              <p class="section-body">
+                <span>R-squared:</span> Tells you how much of the variation in Y is explained by X. An R² of 0.87
+                <span>means 87% of the change in health expenditure is explained by GNI</span>. Check the
+                p-value to confirm it's statistically significant (below 0.05).
+              </p>
+              <p class="section-body">
+                <span>Coefficients:</span> The coefficient for GNI was 0.107 — <span>for every $1
+                  increase in GNI, health expenditure is expected to rise by about 11 cents</span>.
+              </p>
+              <p class="section-body">
+                The coefficient always describes a <strong>one-unit change</strong> in the independent variable.
+                Multiply by a round number to make the interpretation more intuitive for your audience.
+              </p>
+            </div>
+
+            <div class="work-block" id="c2-3">
+              <div class="block-header">
+                <span class="block-title">Residuals & Outliers</span>
+              </div>
+              <p class="section-body">
+                A <span>residual</span> is the difference between the model's predicted value and the actual value.
+                Large residuals are cases that behave unexpectedly — which is often where the most interesting stories
+                are.
+              </p>
+              <div class="code-block">
+                <div class="code-label">R · add predictions and residuals</div>
+                <pre>schools_pr <- schools %>%
+  add_predictions(school_mod1) %>%
+  add_residuals(school_mod1)
+
+# Standardize to find true outliers (z-score > 2 or < -2)
+schools_pr$z_score <- as.numeric(scale(schools_pr$resid))</pre>
+              </div>
+              <div class="code-block">
+                <div class="code-label">R · scatterplot with regression line</div>
+                <pre>plot(schools$poorpct, schools$p_passed,
+     main = "Poverty vs. Test Pass Rate",
+     xlab = "% in poverty", ylab = "% passed",
+     pch = 19)
+abline(school_mod1, col = "red")</pre>
+              </div>
+            </div>
+
+          </div><!-- /work-main -->
+        </div>
+      </div>
+    </div>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container-fluid px-5 d-flex justify-content-between align-items-center">
+        <div class="footer-copy">© 2025 <span>Yaelle Tang</span></div>
+        <div>
+          <a class="footer-link" href="mailto:yueyang_tang@berkeley.edu">Email</a>
+          <a class="footer-link" href="https://www.linkedin.com/in/yaelle-yueyang-tang" target="_blank">LinkedIn</a>
+          <a class="footer-link" href="https://github.com/Yaelle-Tang" target="_blank">GitHub</a>
+          <a class="footer-link" href="https://www.instagram.com/yaelle_tyy/" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/sidebar.js"></script>
+</body>
+
+</html>
