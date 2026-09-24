@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cursor = document.getElementById('cursor');
   document.addEventListener('mousemove', e => {
     cursor.style.left = e.clientX + 'px';
-    cursor.style.top  = e.clientY + 'px';
+    cursor.style.top = e.clientY + 'px';
   });
   document.querySelectorAll('a, button').forEach(el => {
     el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── SIDEBAR ACTIVE STATE ON SCROLL ──
   const sidebarLinks = document.querySelectorAll('.sidebar-link');
-  const sectionIds = ['scrolly', 'dataviz', 'analysis', 'writing'];
+  const sectionIds = ['data-reporting', 'interactives', 'dataviz', 'analysis', 'more-clips'];
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {

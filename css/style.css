@@ -14,10 +14,12 @@
 }
 
 :root {
-  --bg: #F7F5F0;
-  --surface: #EDEAE3;
+  --bg: #fafafa;
+  /* --surface: #F0F0F0; */
+  --surface: #fafafa;
   --text: #1A1814;
-  --accent: #c64a2f;
+  --accent: #EC4D25;
+  --highlight: rgba(236, 77, 37, 0.75);
   --green: #4A6741;
   --muted: #9C9589;
   --border: #D8D4CC;
@@ -58,7 +60,7 @@ body {
 
 /* ── NAV ── */
 .navbar {
-  background: rgba(247, 245, 240, 0.95) !important;
+  background: var(--surface);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid transparent;
   transition: border-color .3s;
@@ -111,32 +113,14 @@ body {
   display: flex;
   align-items: center;
   padding-top: 80px;
-  /* nav offset */
+  padding-bottom: 40px;
 }
 
-.hero-eyebrow {
-  font-family: var(--mono);
-  font-size: 0.8rem;
-  letter-spacing: .25em;
-  text-transform: uppercase;
-  color: var(--accent);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.hero-eyebrow::before {
-  content: '';
-  width: 28px;
-  height: 1px;
-  background: var(--accent);
-  flex-shrink: 0;
-}
 
 .hero-title {
   font-family: var(--mono);
   font-size: 3.2rem;
-  font-weight: 800;
+  font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.08rem;
   margin-bottom: 24px;
@@ -144,7 +128,6 @@ body {
 
 .hero-title em {
   font-style: italic;
-  font-family: var(--serif);
   color: var(--accent);
   font-weight: 400;
 }
@@ -159,7 +142,7 @@ body {
 .hero-body span {
   color: var(--text);
   font-weight: 600;
-  background: linear-gradient(180deg, transparent 60%, hsla(11, 62%, 48%, 0.656) 30%);
+  background: linear-gradient(180deg, transparent 60%, var(--highlight) 30%);
 }
 
 .hero-body a {
@@ -460,6 +443,12 @@ body {
   gap: 20px;
 }
 
+@media (max-width: 767px) {
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .analysis-card {
   display: block;
   text-decoration: none;
@@ -574,6 +563,13 @@ body {
   object-fit: cover;
 }
 
+/* 屏幕小于786px时，切换为单列 */
+@media (max-width: 767px) {
+  .writing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 
 /* Tags */
 .tag {
@@ -681,7 +677,7 @@ body {
 .about-body span {
   color: var(--text);
   font-weight: 600;
-  background: linear-gradient(180deg, transparent 60%, hsla(11, 62%, 48%, 0.656) 30%);
+  background: linear-gradient(180deg, transparent 60%, var(--highlight) 30%);
 }
 
 .about-body a {

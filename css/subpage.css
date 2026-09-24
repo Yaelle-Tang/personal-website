@@ -239,7 +239,7 @@ body {
 .section-body span {
   color: var(--text);
   font-weight: 600;
-  background: linear-gradient(180deg, transparent 60%, hsla(11, 62%, 48%, 0.656) 30%);
+  background: linear-gradient(180deg, transparent 60%, var(--highlight) 30%);
 }
 
 .section-body a {
