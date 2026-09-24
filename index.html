@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yaelle Tang</title>
+  <!-- icon -->
+  <link rel="icon" type="image/png" href="/img/icon.png" />
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -24,8 +26,8 @@
     <div class="container-fluid px-5">
       <a class="navbar-brand" href="#"> <span>Yaelle </span>Tang</a>
       <div class="d-flex gap-1 align-items-center">
-        <a class="nav-link" href="#data-reporting">Data Reporting</a>
         <a class="nav-link" href="#interactives">Interactives</a>
+        <a class="nav-link" href="#data-reporting">Data Reporting</a>
         <a class="nav-link" href="#analysis">Data Analysis</a>
         <a class="nav-link" href="#dataviz">Data Viz</a>
         <a class="nav-link" href="#more-clips">More Clips</a>
@@ -144,8 +146,8 @@
         <div class="col-lg-2 d-none d-lg-block">
           <div class="work-sidebar">
             <span class="sidebar-label">// Portfolio</span>
-            <a class="sidebar-link active" href="#data-reporting">Data Reporting</a>
             <a class="sidebar-link active" href="#interactives">Interactives</a>
+            <a class="sidebar-link active" href="#data-reporting">Data Reporting</a>
             <a class="sidebar-link" href="#analysis">Data Analysis</a>
             <a class="sidebar-link" href="#dataviz">Data Viz</a>
             <a class="sidebar-link" href="#more-clips">More Clips</a>
@@ -155,102 +157,6 @@
         <!-- Main content -->
         <div class="col-lg-10 col-12">
           <div class="work-main">
-
-            <!-- ── Data-reporting ── -->
-            <div class="work-block" id="data-reporting">
-              <div class="block-header">
-                <span class="block-title">Data Reporting</span>
-                <!-- <span class="block-count">5 articles</span> -->
-              </div>
-              <div class="writing-grid">
-
-                <!-- ======= property tax inequality =======-->
-                <a class="project-card writing-card"
-                  href="https://www.inquirer.com/politics/pennsylvania/property-tax-increase-strawberry-mansion-north-philly-20260824.html"
-                  target="_blank">
-                  <div class="card-img-col">
-                    <img src="img/cover-prop-tax-inequality.png" alt="Property Tax Inequality Map in Philadelphia">
-                  </div>
-                  <div class="card-body-custom">
-                    <div class="writing-pub">Philadelphia Inquirer · August 24, 2026</div>
-                    <div class="card-title-custom">Thousands of Philly homeowners are facing property tax increases of
-                      50% or more after this year’s reassessment</div>
-                    <div class="card-desc">Homeowners across Philadelphia saw a median 3% increase in their property
-                      assessments this year. Steeper property assessment hikes are concentrated in predominately Black
-                      and Latino neighborhoods. <br><br>
-                      I analyzed multiple years of Office of Property Assessment data using R, combining it with census
-                      data to test whether certain demographic groups faced disproportionate increases. I also built an
-                      interactive map in ArcGIS Online to show where these increases were concentrated across the city.
-                    </div>
-                    <div><span class="tag tag-red">R</span><span class="tag tag-red">GIS mapping</span><span
-                        class="tag tag-green">Datawrapper</span>
-                    </div>
-                  </div>
-                </a>
-
-                <!-- ======= property reassessment =======-->
-                <a class="project-card writing-card" href="https://www.inquirer.com/news/philadelphia/property-value-taxes-kensington-west-philly-20260708.html 
-" target="_blank">
-                  <div class="card-img-col">
-                    <img src="img/cover-prop-tax-map.png" alt="2026 Property value compared to 2025, by neighborhood">
-                  </div>
-                  <div class="card-body-custom">
-                    <div class="writing-pub">Philadelphia Inquirer · July 8, 2026</div>
-                    <div class="card-title-custom">Property values in Kensington went up more than any other Philly
-                      neighborhood this year</div>
-                    <div class="card-desc">When Philadelphia's Office of Property Assessment released new citywide
-                      reassessment data this year, I turned the analysis around fast to break the news before anyone
-                      else. I compared the new 2027 values against 2025 and found that while the citywide median
-                      assessment rose about 3%, Kensington's median jumped 15%, the highest of any neighborhood in the
-                      city. <br><br>
-                      I data-checked the findings with OPA's Chief Assessor and the Revenue Commissioner before
-                      publication.
-                    </div>
-                    <div><span class="tag tag-red">R</span><span class="tag tag-green">Datawrapper</span>
-                    </div>
-                  </div>
-                </a>
-                <!-- =======Urban tree system =======-->
-                <a class="project-card writing-card"
-                  href="https://richmondconfidential.org/2025/12/08/richmond-stopped-keeping-track-of-its-trees-but-a-grant-funded-plan-is-in-place-to-change-that/"
-                  target="_blank">
-                  <div class="card-img-col">
-                    <img src="img/cover-urbantree.JPG" alt="New funding to track Richmond's urban tree system">
-                  </div>
-                  <div class="card-body-custom">
-                    <div class="writing-pub">Richmond Confidential · December 8, 2025</div>
-                    <div class="card-title-custom">Richmond stopped keeping track of its trees, but a grant-funded plan
-                      is in place to change that.</div>
-                    <div class="card-desc">Richmond's last tree inventory was 12 years ago. Since then, no one knows
-                      exactly how many trees the city has. A $1 million grant will change that, funding a new citywide
-                      census, management software, and a 10-to-20-year canopy plan.</div>
-                    <div><span class="tag tag-red">Python</span><span class="tag tag-green">Datawrapper</span>
-                    </div>
-                  </div>
-                </a>
-
-                <!-- =======Opioid Crisis =======-->
-                <a class="project-card writing-card"
-                  href="https://richmondconfidential.org/2025/10/17/countywide-forum-addresses-richmond-overdose-rate-which-is-highest-in-contra-costa/"
-                  target="_blank">
-                  <div class="card-img-col">
-                    <img src="img/cover-opioid.png" alt="Opioid Crisis Community Forum">
-                  </div>
-                  <div class="card-body-custom">
-                    <div class="writing-pub">Richmond Confidential · October 17, 2025</div>
-                    <div class="card-title-custom">The Opioid Crisis Next Door: How Richmond Is Responding</div>
-                    <div class="card-desc">Richmond's overdose death rate stands at 48.8 per 100,000 — nearly double the
-                      state average. For the first time, all of the city's emergency, public health, and community
-                      organizations gathered under one roof to confront a crisis that quietly takes dozens of local
-                      lives each year.</div>
-                    <div><span class="tag tag-red">Public
-                        Records</span> <span class="tag tag-green">Datawrapper</span>
-                    </div>
-                  </div>
-                </a>
-
-              </div> <!-- data-reporting-grid -->
-            </div> <!-- data-reporting -->
 
             <!-- ── Interactives ── -->
             <div class="work-block" id="interactives">
@@ -384,6 +290,101 @@
               </a>
             </div>
 
+            <!-- ── Data-reporting ── -->
+            <div class="work-block" id="data-reporting">
+              <div class="block-header">
+                <span class="block-title">Data Reporting</span>
+                <!-- <span class="block-count">5 articles</span> -->
+              </div>
+              <div class="writing-grid">
+
+                <!-- ======= property tax inequality =======-->
+                <a class="project-card writing-card"
+                  href="https://www.inquirer.com/politics/pennsylvania/property-tax-increase-strawberry-mansion-north-philly-20260824.html"
+                  target="_blank">
+                  <div class="card-img-col">
+                    <img src="img/cover-prop-tax-inequality.png" alt="Property Tax Inequality Map in Philadelphia">
+                  </div>
+                  <div class="card-body-custom">
+                    <div class="writing-pub">Philadelphia Inquirer · August 24, 2026</div>
+                    <div class="card-title-custom">Thousands of Philly homeowners are facing property tax increases of
+                      50% or more after this year’s reassessment</div>
+                    <div class="card-desc">Homeowners across Philadelphia saw a median 3% increase in their property
+                      assessments this year. Steeper property assessment hikes are concentrated in predominately Black
+                      and Latino neighborhoods. <br><br>
+                      I analyzed multiple years of Office of Property Assessment data using R, combining it with census
+                      data to test whether certain demographic groups faced disproportionate increases. I also built an
+                      interactive map in ArcGIS Online to show where these increases were concentrated across the city.
+                    </div>
+                    <div><span class="tag tag-red">R</span><span class="tag tag-red">GIS mapping</span><span
+                        class="tag tag-green">Datawrapper</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- ======= property reassessment =======-->
+                <a class="project-card writing-card" href="https://www.inquirer.com/news/philadelphia/property-value-taxes-kensington-west-philly-20260708.html 
+" target="_blank">
+                  <div class="card-img-col">
+                    <img src="img/cover-prop-tax-map.png" alt="2026 Property value compared to 2025, by neighborhood">
+                  </div>
+                  <div class="card-body-custom">
+                    <div class="writing-pub">Philadelphia Inquirer · July 8, 2026</div>
+                    <div class="card-title-custom">Property values in Kensington went up more than any other Philly
+                      neighborhood this year</div>
+                    <div class="card-desc">When Philadelphia's Office of Property Assessment released new citywide
+                      reassessment data this year, I turned the analysis around fast to break the news before anyone
+                      else. I compared the new 2027 values against 2025 and found that while the citywide median
+                      assessment rose about 3%, Kensington's median jumped 15%, the highest of any neighborhood in the
+                      city. <br><br>
+                      I data-checked the findings with OPA's Chief Assessor and the Revenue Commissioner before
+                      publication.
+                    </div>
+                    <div><span class="tag tag-red">R</span><span class="tag tag-green">Datawrapper</span>
+                    </div>
+                  </div>
+                </a>
+                <!-- =======Urban tree system =======-->
+                <a class="project-card writing-card"
+                  href="https://richmondconfidential.org/2025/12/08/richmond-stopped-keeping-track-of-its-trees-but-a-grant-funded-plan-is-in-place-to-change-that/"
+                  target="_blank">
+                  <div class="card-img-col">
+                    <img src="img/cover-urbantree.JPG" alt="New funding to track Richmond's urban tree system">
+                  </div>
+                  <div class="card-body-custom">
+                    <div class="writing-pub">Richmond Confidential · December 8, 2025</div>
+                    <div class="card-title-custom">Richmond stopped keeping track of its trees, but a grant-funded plan
+                      is in place to change that.</div>
+                    <div class="card-desc">Richmond's last tree inventory was 12 years ago. Since then, no one knows
+                      exactly how many trees the city has. A $1 million grant will change that, funding a new citywide
+                      census, management software, and a 10-to-20-year canopy plan.</div>
+                    <div><span class="tag tag-red">Python</span><span class="tag tag-green">Datawrapper</span>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- =======Opioid Crisis =======-->
+                <a class="project-card writing-card"
+                  href="https://richmondconfidential.org/2025/10/17/countywide-forum-addresses-richmond-overdose-rate-which-is-highest-in-contra-costa/"
+                  target="_blank">
+                  <div class="card-img-col">
+                    <img src="img/cover-opioid.png" alt="Opioid Crisis Community Forum">
+                  </div>
+                  <div class="card-body-custom">
+                    <div class="writing-pub">Richmond Confidential · October 17, 2025</div>
+                    <div class="card-title-custom">The Opioid Crisis Next Door: How Richmond Is Responding</div>
+                    <div class="card-desc">Richmond's overdose death rate stands at 48.8 per 100,000 — nearly double the
+                      state average. For the first time, all of the city's emergency, public health, and community
+                      organizations gathered under one roof to confront a crisis that quietly takes dozens of local
+                      lives each year.</div>
+                    <div><span class="tag tag-red">Public
+                        Records</span> <span class="tag tag-green">Datawrapper</span>
+                    </div>
+                  </div>
+                </a>
+
+              </div> <!-- data-reporting-grid -->
+            </div> <!-- data-reporting -->
             <!-- ── DATA ANALYSIS ── -->
             <div class="work-block" id="analysis">
               <div class="block-header">
@@ -651,7 +652,7 @@
               journalist.</li>
 
           </ul>
-          <a href="#data-reporting" class="btn-primary-custom">View My Works</a>
+          <a href="#interactives" class="btn-primary-custom">View My Works</a>
         </div>
       </div>
     </div>
