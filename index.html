@@ -1,471 +1,737 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yaelle Tang</title>
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="/img/icon.png" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yaelle Tang</title>
-  <!-- icon -->
-  <link rel="icon" type="image/png" href="/img/icon.png" />
+    <!-- Bootstrap 5 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
-</head>
+  <body>
+    <div class="cursor" id="cursor"></div>
 
-<body>
-
-  <div class="cursor" id="cursor"></div>
-
-  <!-- ═══════════════════════════════════════
+    <!-- ═══════════════════════════════════════
        NAV
   ═══════════════════════════════════════ -->
-  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
-    <div class="container-fluid px-5">
-      <a class="navbar-brand" href="#"> <span>Yaelle </span>Tang</a>
-      <div class="d-flex gap-1 align-items-center">
-        <a class="nav-link" href="#interactives">Interactives</a>
-        <a class="nav-link" href="#data-reporting">Data Reporting</a>
-        <a class="nav-link" href="#analysis">Data Analysis</a>
-        <a class="nav-link" href="#dataviz">Data Viz</a>
-        <a class="nav-link" href="#more-clips">More Clips</a>
-        <a class="nav-link hi" href="#about">More</a>
-        <a class="nav-link hi" href="YaelleTang_Resume_2026.pdf" target="_blank">Resume↗</a>
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand" href="#"> <span>Yaelle </span>Tang</a>
+        <div class="d-flex gap-1 align-items-center">
+          <a class="nav-link" href="#interactives">Interactives</a>
+          <a class="nav-link" href="#data-reporting">Data Reporting</a>
+          <a class="nav-link" href="#analysis">Data Analysis</a>
+          <a class="nav-link" href="#dataviz">Data Viz</a>
+          <a class="nav-link" href="#more-clips">More Clips</a>
+          <a class="nav-link hi" href="#about">More</a>
+          <a
+            class="nav-link hi"
+            href="YaelleTang_Resume_2026.pdf"
+            target="_blank"
+            >Resume↗</a
+          >
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
-  <!-- ═══════════════════════════════════════
+    <!-- ═══════════════════════════════════════
        HERO
   ═══════════════════════════════════════ -->
-  <section class="hero-section" id="hero">
-    <div class="container-fluid px-5">
-      <div class="row justify-content-center">
-
-        <!-- left -->
-        <div class="col-lg-7">
-          <h1 class="hero-title">
-            Uncovering systems through <em>data, code & graphics.</em>
-          </h1>
-          <p class="hero-body">
-            <span>
-              Bilingual data journalist investigating public
-              health, housing equity and government accountability with a
-              focus on interactive visualization and digital storytelling.
-            </span> <br><br>
-            Currently studying at UC Berkeley, pursuing Master degree in
-            <a href="https://journalism.berkeley.edu/person/yaelle_tang/ " target="_blank">Journalism</a> and a Data
-            Science
-            certificate. <br><br>
-            This summer, I worked with the data team at <a href="https://www.inquirer.com/author/tang_yueyang/"
-              target="_blank">the
-              Philadelphia Inquirer</a> as a Dow Jones News Fund Data
-            Journalism Fellow, where I reported on Philly's property reassessment. I traced how certain neighborhoods
-            and demographic groups faced <a
-              href="https://www.inquirer.com/politics/pennsylvania/property-tax-increase-strawberry-mansion-north-philly-20260824.html"
-              target="_blank">disproportionately
-              higher assessment increases </a> , and built <a
-              href="https://www.inquirer.com/real-estate/housing/inq2/philadelphia-property-assessment-tax-saving-program-20260731.html"
-              target="_blank">an interactive searchable
-              tool</a> to help residents navigate
-            their new
-            property tax burden.
-            <br><br>
-            Previous stories published on <a href="https://richmondconfidential.org/author/ytang/"
-              target="_blank">Richmond
-              Confidential</a> and <a href="https://www.thepaper.cn/newsDetail_forward_28626624" target="_blank">The
-              Paper,
-              Shanghai</a>. Co-founded an independent student data journalism team at
-            the
-            Communication University of China — our work on <a
-              href="https://medicalresidency.github.io/datanews-English/" target="_blank">social issues </a>and <a
-              href="https://readymag.website/u2354871644/4448902/" target="_blank">public
-              health </a>received
-            national awards.
-          </p>
-          <div class="hero-actions d-flex align-items-center justify-content-center justify-content-lg-start gap-4">
-            <a href="YaelleTang_Resume_2026.pdf" class="btn-primary-custom" target="_blank">Download Resume</a>
-          </div>
-        </div>
-
-        <!-- Right -->
-        <div
-          class="col-lg-3 mt-lg-0 d-flex ms-lg-5 col-10 mt-5 mb-lg-0 mb-5 flex-column justify-content-center align-items-center hero-photo-col-wrap">
-          <div class="hero-photo-wrap">
-            <img src="img/myphoto.JPG" alt="Yaelle Tang" class="hero-photo">
-            <div class="hero-photo-frame"></div>
-          </div>
-          <div class="hero-socials">
-            <a href="mailto:yueyang_tang@berkeley.edu" title="Email">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="4" width="20" height="16" rx="2" />
-                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-              </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/yaelle-tang" title="LinkedIn" target="_blank">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
-                <rect x="2" y="9" width="4" height="12" />
-                <circle cx="4" cy="4" r="2" />
-              </svg>
-            </a>
-            <a href="https://github.com/Yaelle-Tang" title="GitHub" target="_blank">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path
-                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/yaelle_tyy/" title="Instagram" target="_blank">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="2" width="20" height="20" rx="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════════
-       Portfolio
-  ═══════════════════════════════════════ -->
-  <div class="work-section">
-    <div class="container-fluid px-2 mt-3">
-      <div class="row g-0">
-
-        <!-- Sticky sidebar -->
-        <div class="col-lg-2 d-none d-lg-block">
-          <div class="work-sidebar">
-            <span class="sidebar-label">// Portfolio</span>
-            <a class="sidebar-link active" href="#interactives">Interactives</a>
-            <a class="sidebar-link active" href="#data-reporting">Data Reporting</a>
-            <a class="sidebar-link" href="#analysis">Data Analysis</a>
-            <a class="sidebar-link" href="#dataviz">Data Viz</a>
-            <a class="sidebar-link" href="#more-clips">More Clips</a>
-          </div>
-        </div>
-
-        <!-- Main content -->
-        <div class="col-lg-10 col-12">
-          <div class="work-main">
-
-            <!-- ── Interactives ── -->
-            <div class="work-block" id="interactives">
-              <div class="block-header">
-                <span class="block-title">Interactives</span>
-                <!-- <span class="block-count">2 projects</span> -->
-              </div>
-
-              <!-- ══════property relief tool══════════ -->
-              <a class="project-card"
-                href="https://www.inquirer.com/real-estate/housing/inq2/philadelphia-property-assessment-tax-saving-program-20260731.html "
-                target="_blank">
-                <div class="card-img-col">
-                  <img src="img/cover-tax-saving.png" alt="Property Tax Relief Tool">
-                </div>
-                <div class="card-body-custom">
-                  <div class="card-title-custom">Philly homeowner taxes are going up. Are you missing out on thousands
-                    in savings?</div>
-                  <div class="card-desc">Answer a few short questions to find out which Philadelphia tax relief programs
-                    you likely qualify for, an estimate of how much you could save, application deadlines, and where to
-                    apply. <br><br>
-                    I compiled property assessment data across five years and program eligibility data, then used R to
-                    build eligibility logic across programs. I built the front end so users could interact with the
-                    results directly, and worked with the interactives team to design and test the tool before launch.
-                  </div>
-                  <div class="mb-2">
-                    <span class="tag tag-red">R</span>
-                    <span class="tag tag-yellow">React.js</span>
-                    <span class="tag tag-yellow">HTML/CSS/JS</span>
-                  </div>
-                  <div class="card-meta">July 31, 2026 · Philadelphia Inquirer</div>
-                </div>
+    <section class="hero-section" id="hero">
+      <div class="container-fluid px-5">
+        <div class="row justify-content-center">
+          <!-- left -->
+          <div class="col-lg-7">
+            <h1 class="hero-title">
+              Uncovering systems through <em>data, code & graphics.</em>
+            </h1>
+            <p class="hero-body">
+              <span>
+                Bilingual data journalist investigating public health, housing
+                equity and government accountability with a focus on interactive
+                visualization and digital storytelling.
+              </span>
+              <br /><br />
+              Currently studying at UC Berkeley, pursuing Master degree in
+              <a
+                href="https://journalism.berkeley.edu/person/yaelle_tang/ "
+                target="_blank"
+                >Journalism</a
+              >
+              and a Data Science certificate. <br /><br />
+              This summer, I worked with the data team at
+              <a
+                href="https://www.inquirer.com/author/tang_yueyang/"
+                target="_blank"
+                >the Philadelphia Inquirer</a
+              >
+              as a Dow Jones News Fund Data Journalism Fellow, where I reported
+              on Philly's property reassessment. I traced how certain
+              neighborhoods and demographic groups faced
+              <a
+                href="https://www.inquirer.com/politics/pennsylvania/property-tax-increase-strawberry-mansion-north-philly-20260824.html"
+                target="_blank"
+                >disproportionately higher assessment increases
               </a>
+              , and built
+              <a
+                href="https://www.inquirer.com/real-estate/housing/inq2/philadelphia-property-assessment-tax-saving-program-20260731.html"
+                target="_blank"
+                >an interactive searchable tool</a
+              >
+              to help residents navigate their new property tax burden.
+              <br /><br />
+              Previous stories published on
+              <a
+                href="https://richmondconfidential.org/author/ytang/"
+                target="_blank"
+                >Richmond Confidential</a
+              >
+              and
+              <a
+                href="https://www.thepaper.cn/newsDetail_forward_28626624"
+                target="_blank"
+                >The Paper, Shanghai</a
+              >. Co-founded an independent student data journalism team at the
+              Communication University of China — our work on
+              <a
+                href="https://medicalresidency.github.io/datanews-English/"
+                target="_blank"
+                >social issues </a
+              >and
+              <a
+                href="https://readymag.website/u2354871644/4448902/"
+                target="_blank"
+                >public health </a
+              >received national awards.
+            </p>
+            <div
+              class="hero-actions d-flex align-items-center justify-content-center justify-content-lg-start gap-4"
+            >
+              <a
+                href="YaelleTang_Resume_2026.pdf"
+                class="btn-primary-custom"
+                target="_blank"
+                >Download Resume</a
+              >
+            </div>
+          </div>
 
-              <!-- ══════AI══════════ -->
-              <a class="project-card" href="https://yaelle-tang.github.io/Ai_Anxiety/" target="_blank">
-                <div class="card-img-col">
-                  <img src="img/cover-ai_anxiety.gif" alt="AI Anxiety">
-                </div>
-                <div class="card-body-custom">
-                  <div class="card-title-custom">China AI Gold Rush, everyone wants to get on the table.<br>But... At
-                    what
-                    costs?</div>
-                  <div class="card-desc">When OpenClaw — an open-source AI agent that autonomously controls your
-                    computer — went viral in China, it reached 40,000 GitHub stars in 63 days. This story explores what
-                    drives millions to hand over deep access to their machines before anyone has built a safety net: the
-                    fear of being left behind. <br><br>I interviewed users across China, analyzed
-                    GitHub star data and OpenRouter token logs, and designed an interactive webpage with illustrations.
-                  </div>
-                  <div class="mb-2">
-                    <span class="tag tag-yellow">HTML/CSS/JS</span>
-                    <span class="tag tag-yellow">Svelte</span>
-                    <span class="tag tag-green">D3.js</span>
-                    <span class="tag tag-dark">Procreate</span>
-                  </div>
-                  <div class="card-meta">May 4, 2026 · Web design · Data scraping · Data Viz · Data Analysis</div>
-                </div>
+          <!-- Right -->
+          <div
+            class="col-lg-3 mt-lg-0 d-flex ms-lg-5 col-10 mt-5 mb-lg-0 mb-5 flex-column justify-content-center align-items-center hero-photo-col-wrap"
+          >
+            <div class="hero-photo-wrap">
+              <img src="img/myphoto.JPG" alt="Yaelle Tang" class="hero-photo" />
+              <div class="hero-photo-frame"></div>
+            </div>
+            <div class="hero-socials">
+              <a href="mailto:yueyang_tang@berkeley.edu" title="Email">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="4" width="20" height="16" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
               </a>
-
-              <!-- ══════规培生══════════ -->
-              <a class="project-card" href="https://medicalresidency.github.io/datanews-English/" target="_blank">
-                <div class="card-img-col">
-                  <img src="img/cover-medical.gif" alt="Medical Residency">
-                </div>
-                <div class="card-body-custom">
-                  <div class="card-title-custom">The Struggles of Medical Residency Trainees</div>
-                  <div class="card-desc">Data-driven investigation into China's mental health crisis among young medical
-                    residents — revealing how long hours, low pay, and identity crises push trainees to the brink.
-                    <br><br>I built the full story from the ground up: scraped and analyzed national data, designed all
-                    interactive visualizations, and coded the narrative web experience end-to-end.
-                  </div>
-                  <div class="mb-2">
-                    <span class="tag tag-red">Python</span>
-                    <span class="tag tag-yellow">HTML/CSS/JS</span>
-                    <span class="tag tag-green">D3.js</span>
-                    <span class="tag tag-green">ECharts</span>
-                    <span class="tag tag-green">Flourish</span>
-                    <span class="tag tag-dark">After Effects</span>
-                    <span class="tag tag-dark">Premiere Pro</span>
-                  </div>
-                  <div class="card-meta">July 2024 · Web design · Data scraping · Data Viz · Data Analysis</div>
-                </div>
+              <a
+                href="https://www.linkedin.com/in/yaelle-tang"
+                title="LinkedIn"
+                target="_blank"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"
+                  />
+                  <rect x="2" y="9" width="4" height="12" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
               </a>
-
-              <!-- ══════international student visa══════════ -->
-              <a class="project-card" href="https://yaelle-tang.github.io/International-student-visa/" target="_blank">
-                <div class="card-img-col">
-                  <img src="img/cover-visa.gif" alt="International Student Visa">
-                </div>
-                <div class="card-body-custom">
-                  <div class="card-title-custom">US VISA Curbs On International Students May Hurt Colleges</div>
-                  <div class="card-desc">New international enrollment dropped 17% in fall 2025. I analyzed four federal
-                    datasets — Open Doors, SEVIS, I-94 arrivals, and Common App — to explore the stories behind the
-                    numbers, students stuck waiting for visa slots that never opened, and universities bracing for a
-                    $1.1 billion loss... <br><br>
-                    I designed the visual identity in Figma, coded the full site, and managed version control and
-                    deployment via GitHub.
-
-                  </div>
-                  <div class="mb-2">
-                    <span class="tag tag-yellow">HTML/CSS/JS</span>
-                    <span class="tag tag-yellow">Github</span>
-                    <span class="tag tag-green">Datawrapper</span>
-                    <span class="tag tag-green">Flourish</span>
-                    <span class="tag tag-dark">Figma</span>
-                  </div>
-                  <div class="card-meta">Dec 2025 · Web design · Data Analysis · Data Viz · Interview · Writing</div>
-                </div>
+              <a
+                href="https://github.com/Yaelle-Tang"
+                title="GitHub"
+                target="_blank"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                  />
+                </svg>
               </a>
-
-              <!-- ══════安宁疗护══════════ -->
-              <a class="project-card" href="https://readymag.website/u2354871644/4448902/" target="_blank">
-                <div class="card-img-col">
-                  <img src="img/cover-palliativecare.gif" alt="Palliative Care In China">
-                </div>
-                <div class="card-body-custom">
-                  <div class="card-title-custom">How to Bid Farewell with Love and Dignity at Life's Final Station?
-                  </div>
-                  <div class="card-desc">A multimedia investigation into palliative care in China's aging society —
-                    tracing families navigating pain, loss, and acceptance, while policy and infrastructure lag behind
-                    the need for dignity at the end of life.
-                  </div>
-                  <div class="mb-2">
-                    <span class="tag tag-red">Python</span>
-                    <span class="tag tag-green">Flourish</span>
-                    <span class="tag tag-dark">Readymag</span>
-                    <span class="tag tag-dark">Procreate</span>
-                  </div>
-                  <div class="card-meta">Nov 2023 · Field reporting · Interview · Web design · Data Viz</div>
-                </div>
+              <a
+                href="https://www.instagram.com/yaelle_tyy/"
+                title="Instagram"
+                target="_blank"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="2" y="2" width="20" height="20" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="0.6"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <!-- ── Data-reporting ── -->
-            <div class="work-block" id="data-reporting">
-              <div class="block-header">
-                <span class="block-title">Data Reporting</span>
-                <!-- <span class="block-count">5 articles</span> -->
-              </div>
-              <div class="writing-grid">
+    <!-- ═══════════════════════════════════════
+       Portfolio
+  ═══════════════════════════════════════ -->
+    <div class="work-section">
+      <div class="container-fluid px-2 mt-3">
+        <div class="row g-0">
+          <!-- Sticky sidebar -->
+          <div class="col-lg-2 d-none d-lg-block">
+            <div class="work-sidebar">
+              <span class="sidebar-label">// Portfolio</span>
+              <a class="sidebar-link active" href="#interactives"
+                >Interactives</a
+              >
+              <a class="sidebar-link active" href="#data-reporting"
+                >Data Reporting</a
+              >
+              <a class="sidebar-link" href="#analysis">Data Analysis</a>
+              <a class="sidebar-link" href="#dataviz">Data Viz</a>
+              <a class="sidebar-link" href="#more-clips">More Clips</a>
+            </div>
+          </div>
 
-                <!-- ======= property tax inequality =======-->
-                <a class="project-card writing-card"
-                  href="https://www.inquirer.com/politics/pennsylvania/property-tax-increase-strawberry-mansion-north-philly-20260824.html"
-                  target="_blank">
+          <!-- Main content -->
+          <div class="col-lg-10 col-12">
+            <div class="work-main">
+              <!-- ── Interactives ── -->
+              <div class="work-block" id="interactives">
+                <div class="block-header">
+                  <span class="block-title">Interactives</span>
+                  <!-- <span class="block-count">2 projects</span> -->
+                </div>
+
+                <!-- ══════property relief tool══════════ -->
+                <a
+                  class="project-card"
+                  href="https://www.inquirer.com/real-estate/housing/inq2/philadelphia-property-assessment-tax-saving-program-20260731.html "
+                  target="_blank"
+                >
                   <div class="card-img-col">
-                    <img src="img/cover-prop-tax-inequality.png" alt="Property Tax Inequality Map in Philadelphia">
+                    <img
+                      src="img/cover-tax-saving.png"
+                      alt="Property Tax Relief Tool"
+                    />
                   </div>
                   <div class="card-body-custom">
-                    <div class="writing-pub">Philadelphia Inquirer · August 24, 2026</div>
-                    <div class="card-title-custom">Thousands of Philly homeowners are facing property tax increases of
-                      50% or more after this year’s reassessment</div>
-                    <div class="card-desc">Homeowners across Philadelphia saw a median 3% increase in their property
-                      assessments this year. Steeper property assessment hikes are concentrated in predominately Black
-                      and Latino neighborhoods. <br><br>
-                      I analyzed multiple years of Office of Property Assessment data using R, combining it with census
-                      data to test whether certain demographic groups faced disproportionate increases. I also built an
-                      interactive map in ArcGIS Online to show where these increases were concentrated across the city.
-                    </div>
-                    <div><span class="tag tag-red">R</span><span class="tag tag-red">GIS mapping</span><span
-                        class="tag tag-green">Datawrapper</span>
-                    </div>
-                  </div>
-                </a>
-
-                <!-- ======= property reassessment =======-->
-                <a class="project-card writing-card" href="https://www.inquirer.com/news/philadelphia/property-value-taxes-kensington-west-philly-20260708.html 
-" target="_blank">
-                  <div class="card-img-col">
-                    <img src="img/cover-prop-tax-map.png" alt="2026 Property value compared to 2025, by neighborhood">
-                  </div>
-                  <div class="card-body-custom">
-                    <div class="writing-pub">Philadelphia Inquirer · July 8, 2026</div>
-                    <div class="card-title-custom">Property values in Kensington went up more than any other Philly
-                      neighborhood this year</div>
-                    <div class="card-desc">When Philadelphia's Office of Property Assessment released new citywide
-                      reassessment data this year, I turned the analysis around fast to break the news before anyone
-                      else. I compared the new 2027 values against 2025 and found that while the citywide median
-                      assessment rose about 3%, Kensington's median jumped 15%, the highest of any neighborhood in the
-                      city. <br><br>
-                      I data-checked the findings with OPA's Chief Assessor and the Revenue Commissioner before
-                      publication.
-                    </div>
-                    <div><span class="tag tag-red">R</span><span class="tag tag-green">Datawrapper</span>
-                    </div>
-                  </div>
-                </a>
-                <!-- =======Urban tree system =======-->
-                <a class="project-card writing-card"
-                  href="https://richmondconfidential.org/2025/12/08/richmond-stopped-keeping-track-of-its-trees-but-a-grant-funded-plan-is-in-place-to-change-that/"
-                  target="_blank">
-                  <div class="card-img-col">
-                    <img src="img/cover-urbantree.JPG" alt="New funding to track Richmond's urban tree system">
-                  </div>
-                  <div class="card-body-custom">
-                    <div class="writing-pub">Richmond Confidential · December 8, 2025</div>
-                    <div class="card-title-custom">Richmond stopped keeping track of its trees, but a grant-funded plan
-                      is in place to change that.</div>
-                    <div class="card-desc">Richmond's last tree inventory was 12 years ago. Since then, no one knows
-                      exactly how many trees the city has. A $1 million grant will change that, funding a new citywide
-                      census, management software, and a 10-to-20-year canopy plan.</div>
-                    <div><span class="tag tag-red">Python</span><span class="tag tag-green">Datawrapper</span>
-                    </div>
-                  </div>
-                </a>
-
-                <!-- =======Opioid Crisis =======-->
-                <a class="project-card writing-card"
-                  href="https://richmondconfidential.org/2025/10/17/countywide-forum-addresses-richmond-overdose-rate-which-is-highest-in-contra-costa/"
-                  target="_blank">
-                  <div class="card-img-col">
-                    <img src="img/cover-opioid.png" alt="Opioid Crisis Community Forum">
-                  </div>
-                  <div class="card-body-custom">
-                    <div class="writing-pub">Richmond Confidential · October 17, 2025</div>
-                    <div class="card-title-custom">The Opioid Crisis Next Door: How Richmond Is Responding</div>
-                    <div class="card-desc">Richmond's overdose death rate stands at 48.8 per 100,000 — nearly double the
-                      state average. For the first time, all of the city's emergency, public health, and community
-                      organizations gathered under one roof to confront a crisis that quietly takes dozens of local
-                      lives each year.</div>
-                    <div><span class="tag tag-red">Public
-                        Records</span> <span class="tag tag-green">Datawrapper</span>
-                    </div>
-                  </div>
-                </a>
-
-              </div> <!-- data-reporting-grid -->
-            </div> <!-- data-reporting -->
-            <!-- ── DATA ANALYSIS ── -->
-            <div class="work-block" id="analysis">
-              <div class="block-header">
-                <span class="block-title">Data Analysis</span>
-                <!-- <span class="block-count">2 projects</span> -->
-              </div>
-              <div class="analysis-grid">
-                <!-- ══════GDP analysis═════════ -->
-                <a class="analysis-card" href="https://djnf-data-2026.github.io/yaelle-tang/" target="_blank">
-                  <div class="analysis-card-img">
-                    <img src="img/cover-delaware-GDP.png" alt="Delaware County GDP">
-                  </div>
-                  <div class="analysis-card-body">
-                    <div class="card-title-custom">Why Is Delaware County the Only Shrinking Economy in Greater
-                      Philadelphia?</div>
-                    <div class="card-desc">Used R to investigate GDP trends, industry composition shifts, and per capita
-                      income changes across the Greater Philadelphia region. Built and deployed HTML data reports using
-                      Quarto files with version control via GitHub
-                    </div>
-                    <div>
-                      <span class="tag tag-red">R</span><span class="tag tag-red">Quarto</span><span
-                        class="tag tag-green">Datawrapper</span>
-                    </div>
-                  </div>
-                </a>
-                <!-- ══════GDP analysis═════════ -->
-                <a class="analysis-card" href="https://yaelle-tang.github.io/california-water-quality/" target="_blank">
-                  <div class="analysis-card-img">
-                    <img src="img/cover-water-quality.png" alt="Central Valley Water Quality">
-                  </div>
-                  <div class="analysis-card-body">
-                    <div class="card-title-custom">Exploring Water Quality in Central Valley: Who is facing the highest
-                      risk?
+                    <div class="card-title-custom">
+                      Philly homeowner taxes are going up. Are you missing out
+                      on thousands in savings?
                     </div>
                     <div class="card-desc">
-                      Using SAFER(Safeguarding and Fulfilling Environmental Responsibilities) data, we analyzed water
-                      quality in California's Central Valley. We found that smaller water systems far more likely to be
-                      failing and the most vulnerable communities are
-                      disproportionately affected by poor water quality. I made a interactive table for users to explore
-                      which chemicals are driving failures in Central Valley by different counties.
+                      Answer a few short questions to find out which
+                      Philadelphia tax relief programs you likely qualify for,
+                      an estimate of how much you could save, application
+                      deadlines, and where to apply. <br /><br />
+                      I compiled property assessment data across five years and
+                      program eligibility data, then used R to build eligibility
+                      logic across programs. I built the front end so users
+                      could interact with the results directly, and worked with
+                      the interactives team to design and test the tool before
+                      launch.
                     </div>
-                    <div>
-                      <span class="tag tag-red">R</span><span class="tag tag-green">Datawrapper</span>
-                    </div>
-                  </div>
-                </a>
-                <!-- ══════Trees analysis═════════ -->
-                <a class="analysis-card" href="projects/trees.html" target="_blank">
-                  <div class="analysis-card-img">
-                    <img src="img/cover-analysis-tree.gif" alt="Tree Canopy">
-                  </div>
-                  <div class="analysis-card-body">
-                    <div class="card-title-custom">Richmond's Tree Canopy Gap</div>
-                    <div class="card-desc">Analyzed 35,584 geolocated tree records to map canopy gaps across
-                      neighborhoods, revealing how the least-covered areas overlap almost entirely with low-income
-                      communities and communities of color.</div>
-                    <div>
-                      <span class="tag tag-red">Python</span>
-                      <span class="tag tag-red">GIS mapping</span>
-                      <span class="tag tag-green">Datawrapper</span>
-                    </div>
-                  </div>
-                </a>
-                <!-- ══════R notes═════════ -->
-                <a class="analysis-card" href="projects/r-notes.html" target="_blank">
-                  <div class="analysis-card-img">
-                    <img src="img/cover-rnote.png" alt="R Notes">
-                  </div>
-                  <div class="analysis-card-body">
-                    <div class="card-title-custom">Learning R for
-                      Data Analysis in Journalism</div>
-                    <div class="card-desc">I officially started to learn R in 2026 Spring (self taught a little bit
-                      before). This is the notes from
-                      course J298 Reporting Inequality with Data at UC Berkeley's Graduate School of Journalism.</div>
-                    <div>
+                    <div class="mb-2">
                       <span class="tag tag-red">R</span>
+                      <span class="tag tag-yellow">React.js</span>
+                      <span class="tag tag-yellow">HTML/CSS/JS</span>
+                    </div>
+                    <div class="card-meta">
+                      July 31, 2026 · Philadelphia Inquirer
                     </div>
                   </div>
                 </a>
 
-                <!-- <a class="analysis-card" href="projects/ai-papers.html" target="_blank">
+                <!-- ══════AI══════════ -->
+                <a
+                  class="project-card"
+                  href="https://yaelle-tang.github.io/Ai_Anxiety/"
+                  target="_blank"
+                >
+                  <div class="card-img-col">
+                    <img src="img/cover-ai_anxiety.gif" alt="AI Anxiety" />
+                  </div>
+                  <div class="card-body-custom">
+                    <div class="card-title-custom">
+                      China AI Gold Rush, everyone wants to get on the table.<br />But...
+                      At what costs?
+                    </div>
+                    <div class="card-desc">
+                      When OpenClaw — an open-source AI agent that autonomously
+                      controls your computer — went viral in China, it reached
+                      40,000 GitHub stars in 63 days. This story explores what
+                      drives millions to hand over deep access to their machines
+                      before anyone has built a safety net: the fear of being
+                      left behind. <br /><br />I interviewed users across China,
+                      analyzed GitHub star data and OpenRouter token logs, and
+                      designed an interactive webpage with illustrations.
+                    </div>
+                    <div class="mb-2">
+                      <span class="tag tag-yellow">HTML/CSS/JS</span>
+                      <span class="tag tag-yellow">Svelte</span>
+                      <span class="tag tag-green">D3.js</span>
+                      <span class="tag tag-dark">Procreate</span>
+                    </div>
+                    <div class="card-meta">
+                      May 4, 2026 · Web design · Data scraping · Data Viz · Data
+                      Analysis
+                    </div>
+                  </div>
+                </a>
+
+                <!-- ══════规培生══════════ -->
+                <a
+                  class="project-card"
+                  href="https://medicalresidency.github.io/datanews-English/"
+                  target="_blank"
+                >
+                  <div class="card-img-col">
+                    <img src="img/cover-medical.gif" alt="Medical Residency" />
+                  </div>
+                  <div class="card-body-custom">
+                    <div class="card-title-custom">
+                      The Struggles of Medical Residency Trainees
+                    </div>
+                    <div class="card-desc">
+                      Data-driven investigation into China's mental health
+                      crisis among young medical residents — revealing how long
+                      hours, low pay, and identity crises push trainees to the
+                      brink. <br /><br />I built the full story from the ground
+                      up: scraped and analyzed national data, designed all
+                      interactive visualizations, and coded the narrative web
+                      experience end-to-end.
+                    </div>
+                    <div class="mb-2">
+                      <span class="tag tag-red">Python</span>
+                      <span class="tag tag-yellow">HTML/CSS/JS</span>
+                      <span class="tag tag-green">D3.js</span>
+                      <span class="tag tag-green">ECharts</span>
+                      <span class="tag tag-green">Flourish</span>
+                      <span class="tag tag-dark">After Effects</span>
+                      <span class="tag tag-dark">Premiere Pro</span>
+                    </div>
+                    <div class="card-meta">
+                      July 2024 · Web design · Data scraping · Data Viz · Data
+                      Analysis
+                    </div>
+                  </div>
+                </a>
+
+                <!-- ══════international student visa══════════ -->
+                <a
+                  class="project-card"
+                  href="https://yaelle-tang.github.io/International-student-visa/"
+                  target="_blank"
+                >
+                  <div class="card-img-col">
+                    <img
+                      src="img/cover-visa.gif"
+                      alt="International Student Visa"
+                    />
+                  </div>
+                  <div class="card-body-custom">
+                    <div class="card-title-custom">
+                      US VISA Curbs On International Students May Hurt Colleges
+                    </div>
+                    <div class="card-desc">
+                      New international enrollment dropped 17% in fall 2025. I
+                      analyzed four federal datasets — Open Doors, SEVIS, I-94
+                      arrivals, and Common App — to explore the stories behind
+                      the numbers, students stuck waiting for visa slots that
+                      never opened, and universities bracing for a $1.1 billion
+                      loss... <br /><br />
+                      I designed the visual identity in Figma, coded the full
+                      site, and managed version control and deployment via
+                      GitHub.
+                    </div>
+                    <div class="mb-2">
+                      <span class="tag tag-yellow">HTML/CSS/JS</span>
+                      <span class="tag tag-yellow">Github</span>
+                      <span class="tag tag-green">Datawrapper</span>
+                      <span class="tag tag-green">Flourish</span>
+                      <span class="tag tag-dark">Figma</span>
+                    </div>
+                    <div class="card-meta">
+                      Dec 2025 · Web design · Data Analysis · Data Viz ·
+                      Interview · Writing
+                    </div>
+                  </div>
+                </a>
+
+                <!-- ══════安宁疗护══════════ -->
+                <a
+                  class="project-card"
+                  href="https://readymag.website/u2354871644/4448902/"
+                  target="_blank"
+                >
+                  <div class="card-img-col">
+                    <img
+                      src="img/cover-palliativecare.gif"
+                      alt="Palliative Care In China"
+                    />
+                  </div>
+                  <div class="card-body-custom">
+                    <div class="card-title-custom">
+                      How to Bid Farewell with Love and Dignity at Life's Final
+                      Station?
+                    </div>
+                    <div class="card-desc">
+                      A multimedia investigation into palliative care in China's
+                      aging society — tracing families navigating pain, loss,
+                      and acceptance, while policy and infrastructure lag behind
+                      the need for dignity at the end of life.
+                    </div>
+                    <div class="mb-2">
+                      <span class="tag tag-red">Python</span>
+                      <span class="tag tag-green">Flourish</span>
+                      <span class="tag tag-dark">Readymag</span>
+                      <span class="tag tag-dark">Procreate</span>
+                    </div>
+                    <div class="card-meta">
+                      Nov 2023 · Field reporting · Interview · Web design · Data
+                      Viz
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <!-- ── Data-reporting ── -->
+              <div class="work-block" id="data-reporting">
+                <div class="block-header">
+                  <span class="block-title">Data Reporting</span>
+                  <!-- <span class="block-count">5 articles</span> -->
+                </div>
+                <div class="writing-grid">
+                  <!-- ======= property tax inequality =======-->
+                  <a
+                    class="project-card writing-card"
+                    href="https://www.inquirer.com/politics/pennsylvania/property-tax-increase-strawberry-mansion-north-philly-20260824.html"
+                    target="_blank"
+                  >
+                    <div class="card-img-col">
+                      <img
+                        src="img/cover-prop-tax-inequality.png"
+                        alt="Property Tax Inequality Map in Philadelphia"
+                      />
+                    </div>
+                    <div class="card-body-custom">
+                      <div class="writing-pub">
+                        Philadelphia Inquirer · August 24, 2026
+                      </div>
+                      <div class="card-title-custom">
+                        Thousands of Philly homeowners are facing property tax
+                        increases of 50% or more after this year’s reassessment
+                      </div>
+                      <div class="card-desc">
+                        Homeowners across Philadelphia saw a median 3% increase
+                        in their property assessments this year. Steeper
+                        property assessment hikes are concentrated in
+                        predominately Black and Latino neighborhoods.
+                        <br /><br />
+                        I analyzed multiple years of Office of Property
+                        Assessment data using R, combining it with census data
+                        to test whether certain demographic groups faced
+                        disproportionate increases. I also built an interactive
+                        map in ArcGIS Online to show where these increases were
+                        concentrated across the city.
+                      </div>
+                      <div>
+                        <span class="tag tag-red">R</span
+                        ><span class="tag tag-red">GIS mapping</span
+                        ><span class="tag tag-green">Datawrapper</span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <!-- ======= property reassessment =======-->
+                  <a
+                    class="project-card writing-card"
+                    href="https://www.inquirer.com/news/philadelphia/property-value-taxes-kensington-west-philly-20260708.html 
+"
+                    target="_blank"
+                  >
+                    <div class="card-img-col">
+                      <img
+                        src="img/cover-prop-tax-map.png"
+                        alt="2026 Property value compared to 2025, by neighborhood"
+                      />
+                    </div>
+                    <div class="card-body-custom">
+                      <div class="writing-pub">
+                        Philadelphia Inquirer · July 8, 2026
+                      </div>
+                      <div class="card-title-custom">
+                        Property values in Kensington went up more than any
+                        other Philly neighborhood this year
+                      </div>
+                      <div class="card-desc">
+                        When Philadelphia's Office of Property Assessment
+                        released new citywide reassessment data this year, I
+                        turned the analysis around fast to break the news before
+                        anyone else. I compared the new 2027 values against 2025
+                        and found that while the citywide median assessment rose
+                        about 3%, Kensington's median jumped 15%, the highest of
+                        any neighborhood in the city. <br /><br />
+                        I data-checked the findings with OPA's Chief Assessor
+                        and the Revenue Commissioner before publication.
+                      </div>
+                      <div>
+                        <span class="tag tag-red">R</span
+                        ><span class="tag tag-green">Datawrapper</span>
+                      </div>
+                    </div>
+                  </a>
+                  <!-- =======Urban tree system =======-->
+                  <a
+                    class="project-card writing-card"
+                    href="https://richmondconfidential.org/2025/12/08/richmond-stopped-keeping-track-of-its-trees-but-a-grant-funded-plan-is-in-place-to-change-that/"
+                    target="_blank"
+                  >
+                    <div class="card-img-col">
+                      <img
+                        src="img/cover-urbantree.JPG"
+                        alt="New funding to track Richmond's urban tree system"
+                      />
+                    </div>
+                    <div class="card-body-custom">
+                      <div class="writing-pub">
+                        Richmond Confidential · December 8, 2025
+                      </div>
+                      <div class="card-title-custom">
+                        Richmond stopped keeping track of its trees, but a
+                        grant-funded plan is in place to change that.
+                      </div>
+                      <div class="card-desc">
+                        Richmond's last tree inventory was 12 years ago. Since
+                        then, no one knows exactly how many trees the city has.
+                        A $1 million grant will change that, funding a new
+                        citywide census, management software, and a
+                        10-to-20-year canopy plan.
+                      </div>
+                      <div>
+                        <span class="tag tag-red">Python</span
+                        ><span class="tag tag-green">Datawrapper</span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <!-- =======Opioid Crisis =======-->
+                  <a
+                    class="project-card writing-card"
+                    href="https://richmondconfidential.org/2025/10/17/countywide-forum-addresses-richmond-overdose-rate-which-is-highest-in-contra-costa/"
+                    target="_blank"
+                  >
+                    <div class="card-img-col">
+                      <img
+                        src="img/cover-opioid.png"
+                        alt="Opioid Crisis Community Forum"
+                      />
+                    </div>
+                    <div class="card-body-custom">
+                      <div class="writing-pub">
+                        Richmond Confidential · October 17, 2025
+                      </div>
+                      <div class="card-title-custom">
+                        The Opioid Crisis Next Door: How Richmond Is Responding
+                      </div>
+                      <div class="card-desc">
+                        Richmond's overdose death rate stands at 48.8 per
+                        100,000 — nearly double the state average. For the first
+                        time, all of the city's emergency, public health, and
+                        community organizations gathered under one roof to
+                        confront a crisis that quietly takes dozens of local
+                        lives each year.
+                      </div>
+                      <div>
+                        <span class="tag tag-red">Public Records</span>
+                        <span class="tag tag-green">Datawrapper</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- data-reporting-grid -->
+              </div>
+              <!-- data-reporting -->
+              <!-- ── DATA ANALYSIS ── -->
+              <div class="work-block" id="analysis">
+                <div class="block-header">
+                  <span class="block-title">Data Analysis</span>
+                  <!-- <span class="block-count">2 projects</span> -->
+                </div>
+                <div class="analysis-grid">
+                  <!-- ══════GDP analysis═════════ -->
+                  <a
+                    class="analysis-card"
+                    href="https://djnf-data-2026.github.io/yaelle-tang/"
+                    target="_blank"
+                  >
+                    <div class="analysis-card-img">
+                      <img
+                        src="img/cover-delaware-GDP.png"
+                        alt="Delaware County GDP"
+                      />
+                    </div>
+                    <div class="analysis-card-body">
+                      <div class="card-title-custom">
+                        Why Is Delaware County the Only Shrinking Economy in
+                        Greater Philadelphia?
+                      </div>
+                      <div class="card-desc">
+                        Used R to investigate GDP trends, industry composition
+                        shifts, and per capita income changes across the Greater
+                        Philadelphia region. Built and deployed HTML data
+                        reports using Quarto files with version control via
+                        GitHub
+                      </div>
+                      <div>
+                        <span class="tag tag-red">R</span
+                        ><span class="tag tag-red">Quarto</span
+                        ><span class="tag tag-green">Datawrapper</span>
+                      </div>
+                    </div>
+                  </a>
+                  <!-- ══════GDP analysis═════════ -->
+                  <a
+                    class="analysis-card"
+                    href="https://yaelle-tang.github.io/california-water-quality/"
+                    target="_blank"
+                  >
+                    <div class="analysis-card-img">
+                      <img
+                        src="img/cover-water-quality.png"
+                        alt="Central Valley Water Quality"
+                      />
+                    </div>
+                    <div class="analysis-card-body">
+                      <div class="card-title-custom">
+                        Exploring Water Quality in Central Valley: Who is facing
+                        the highest risk?
+                      </div>
+                      <div class="card-desc">
+                        Using SAFER(Safeguarding and Fulfilling Environmental
+                        Responsibilities) data, we analyzed water quality in
+                        California's Central Valley. We found that smaller water
+                        systems far more likely to be failing and the most
+                        vulnerable communities are disproportionately affected
+                        by poor water quality. I made a interactive table for
+                        users to explore which chemicals are driving failures in
+                        Central Valley by different counties.
+                      </div>
+                      <div>
+                        <span class="tag tag-red">R</span
+                        ><span class="tag tag-green">Datawrapper</span>
+                      </div>
+                    </div>
+                  </a>
+                  <!-- ══════Trees analysis═════════ -->
+                  <a
+                    class="analysis-card"
+                    href="projects/trees.html"
+                    target="_blank"
+                  >
+                    <div class="analysis-card-img">
+                      <img
+                        src="img/cover-analysis-tree.gif"
+                        alt="Tree Canopy"
+                      />
+                    </div>
+                    <div class="analysis-card-body">
+                      <div class="card-title-custom">
+                        Richmond's Tree Canopy Gap
+                      </div>
+                      <div class="card-desc">
+                        Analyzed 35,584 geolocated tree records to map canopy
+                        gaps across neighborhoods, revealing how the
+                        least-covered areas overlap almost entirely with
+                        low-income communities and communities of color.
+                      </div>
+                      <div>
+                        <span class="tag tag-red">Python</span>
+                        <span class="tag tag-red">GIS mapping</span>
+                        <span class="tag tag-green">Datawrapper</span>
+                      </div>
+                    </div>
+                  </a>
+                  <!-- ══════R notes═════════ -->
+                  <a
+                    class="analysis-card"
+                    href="projects/r-notes.html"
+                    target="_blank"
+                  >
+                    <div class="analysis-card-img">
+                      <img src="img/cover-rnote.png" alt="R Notes" />
+                    </div>
+                    <div class="analysis-card-body">
+                      <div class="card-title-custom">
+                        Learning R for Data Analysis in Journalism
+                      </div>
+                      <div class="card-desc">
+                        I officially started to learn R in 2026 Spring (self
+                        taught a little bit before). This is the notes from
+                        course J298 Reporting Inequality with Data at UC
+                        Berkeley's Graduate School of Journalism.
+                      </div>
+                      <div>
+                        <span class="tag tag-red">R</span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <!-- <a class="analysis-card" href="projects/ai-papers.html" target="_blank">
                   <div class="analysis-card-img">
                     <img src="img/cover-arbor-day.JPG" alt="AI Papers">
                   </div>
@@ -478,206 +744,290 @@
                     </div>
                   </div>
                 </a> -->
-
+                </div>
               </div>
 
-
-            </div>
-
-            <!-- ── DATA VISUALIZATION ── -->
-            <div class="work-block" id="dataviz">
-              <div class="block-header">
-                <span class="block-title">Data Visualization</span>
-                <!-- <span class="block-count">2 projects</span> -->
-              </div>
-              <!-- ══════近视═════════ -->
-              <a class="project-card"
-                href="https://medium.com/@yueyang_tang/uncovering-the-truth-behind-4-000-e-commerce-myopia-correction-products-4e724e76c2b5"
-                target="_blank">
-                <div class="card-img-col">
-                  <img src="img/cover-myopia.png" alt="Myopia">
+              <!-- ── DATA VISUALIZATION ── -->
+              <div class="work-block" id="dataviz">
+                <div class="block-header">
+                  <span class="block-title">Data Visualization</span>
+                  <!-- <span class="block-count">2 projects</span> -->
                 </div>
-                <div class="card-body-custom">
-                  <div class="writing-pub">The Paper, 澎湃新闻 · June 6, 2024</div>
-                  <div class="card-title-custom">Uncovering the Truth Behind 4,000 E-Commerce Myopia Correction Products
-                  </div>
-                  <div class="card-desc">I analyzed over 4,000 e-commerce listings and consumer complaints to uncover
-                    how sellers hide false claims in banner images, revealing how misleading advertising continues to
-                    thrive in China’s myopia prevention market despite regulatory crackdowns and endangers families with
-                    short-sighted children.</div>
-                  <div class="mb-2">
-                    <span class="tag tag-red">Python</span>
-                    <span class="tag tag-red">Octoparse</span>
-                    <span class="tag tag-dark">Adobe Illustrator</span>
-                  </div>
-                  <div class="card-meta">June 2024 · Data scraping · Data Analysis · Data Viz · Writing</div>
-                </div>
-              </a>
-
-              <!-- ══════宿舍═════════ -->
-              <a class="project-card" href="https://www.thepaper.cn/newsDetail_forward_28626624" target="_blank">
-                <div class="card-img-col">
-                  <img src="img/cover-dorm.png" alt="Chinese College Dorms">
-                </div>
-                <div class="card-body-custom">
-                  <div class="writing-pub">The Paper, 澎湃新闻 · September 4, 2024</div>
-                  <div class="card-title-custom">Why College Dorms in China Get So Many Complaints?</div>
-                  <div class="card-desc"> I analyzed 9,000 dorm reviews from the WAVE platform and national education
-                    data to explore why Chinese university students keep complaining about their dorms. I found that
-                    overcrowding, outdated facilities, and slow renovation have worsened as enrollment expands.
-                    Comparing dorm costs and conditions across major universities also revealed how affordability limits
-                    upgrades and widens inequality between schools.</div>
-                  <div class="mb-2">
-                    <span class="tag tag-red">Python</span>
-                    <span class="tag tag-red">Fiddler</span>
-                    <span class="tag tag-green">Fourish</span>
-                    <span class="tag tag-dark">Adobe Illustrator</span>
-                  </div>
-                  <div class="card-meta">September 2024 · Data scraping · Data Analysis · Data Viz · Writing</div>
-                </div>
-              </a>
-
-              <!-- ══════AI═════════ -->
-              <a class="project-card" href="https://www.thepaper.cn/newsDetail_forward_27798791" target="_blank">
-                <div class="card-img-col">
-                  <img src="img/cover-chineseaipaper.png" alt="AI Papers in China">
-                </div>
-                <div class="card-body-custom">
-                  <div class="writing-pub">The Paper, 澎湃新闻 · July 4, 2024</div>
-                  <div class="card-title-custom">What 2.78 Million AI Papers Reveal About China’s Role in Global
-                    Research</div>
-                  <div class="card-desc"> I examined 2.78 million global AI papers from multiple academic databases to
-                    show that China now leads the world in both publication volume and citation impact. Chinese
-                    institutions dominate global rankings and Chinese researchers contribute to most of the world’s
-                    highly cited papers in AI. Yet a large share of that work is conducted overseas, suggesting China
-                    still faces challenges in retaining top research talent. </div>
-                  <div class="mb-2">
-                    <span class="tag tag-red">Python</span>
-                    <span class="tag tag-green">Fourish</span>
-                    <span class="tag tag-dark">Adobe Illustrator</span>
-                  </div>
-                  <div class="card-meta">September 2024 · Data scraping · Data Analysis · Data Viz · Writing</div>
-                </div>
-              </a>
-
-            </div>
-
-
-
-
-
-            <!-- ── More clips ── -->
-            <div class="work-block" id="more-clips">
-              <div class="block-header">
-                <span class="block-title">More Clips</span>
-                <!-- <span class="block-count">5 articles</span> -->
-              </div>
-              <div class="writing-grid">
-
-                <!-- =======Arbor day =======-->
-                <a class="project-card writing-card"
-                  href="https://richmondconfidential.org/2025/10/20/arbor-day-in-richmond-50-volunteers-plant-29-trees/"
-                  target="_blank">
+                <!-- ══════近视═════════ -->
+                <a
+                  class="project-card"
+                  href="https://medium.com/@yueyang_tang/uncovering-the-truth-behind-4-000-e-commerce-myopia-correction-products-4e724e76c2b5"
+                  target="_blank"
+                >
                   <div class="card-img-col">
-                    <img src="img/cover-arbor-day.JPG" alt="Arbor Day">
+                    <img src="img/cover-myopia.png" alt="Myopia" />
                   </div>
                   <div class="card-body-custom">
-                    <div class="writing-pub">Richmond Confidential · October 20, 2025</div>
-                    <div class="card-title-custom">Arbor Day in Richmond: 50 volunteers plant 29 trees</div>
-                    <div class="card-desc">On Richmond’s 14th annual Arbor Day, about 50 volunteers joined Groundwork
-                      Richmond to plant 29 trees along the city’s Greenway. The event is part of a five-year plan to
-                      restore green spaces and train local youth in environmental jobs.</div>
-                    <div><span class="tag tag-dark">Field Reporting</span><span
-                        class="tag tag-dark">Photography</span><span class="tag tag-dark">Public Records</span>
+                    <div class="writing-pub">
+                      The Paper, 澎湃新闻 · June 6, 2024
+                    </div>
+                    <div class="card-title-custom">
+                      Uncovering the Truth Behind 4,000 E-Commerce Myopia
+                      Correction Products
+                    </div>
+                    <div class="card-desc">
+                      I analyzed over 4,000 e-commerce listings and consumer
+                      complaints to uncover how sellers hide false claims in
+                      banner images, revealing how misleading advertising
+                      continues to thrive in China’s myopia prevention market
+                      despite regulatory crackdowns and endangers families with
+                      short-sighted children.
+                    </div>
+                    <div class="mb-2">
+                      <span class="tag tag-red">Python</span>
+                      <span class="tag tag-red">Octoparse</span>
+                      <span class="tag tag-dark">Adobe Illustrator</span>
+                    </div>
+                    <div class="card-meta">
+                      June 2024 · Data scraping · Data Analysis · Data Viz ·
+                      Writing
                     </div>
                   </div>
                 </a>
 
-              </div> <!-- writing-grid -->
-            </div> <!-- writing -->
+                <!-- ══════宿舍═════════ -->
+                <a
+                  class="project-card"
+                  href="https://www.thepaper.cn/newsDetail_forward_28626624"
+                  target="_blank"
+                >
+                  <div class="card-img-col">
+                    <img src="img/cover-dorm.png" alt="Chinese College Dorms" />
+                  </div>
+                  <div class="card-body-custom">
+                    <div class="writing-pub">
+                      The Paper, 澎湃新闻 · September 4, 2024
+                    </div>
+                    <div class="card-title-custom">
+                      Why College Dorms in China Get So Many Complaints?
+                    </div>
+                    <div class="card-desc">
+                      I analyzed 9,000 dorm reviews from the WAVE platform and
+                      national education data to explore why Chinese university
+                      students keep complaining about their dorms. I found that
+                      overcrowding, outdated facilities, and slow renovation
+                      have worsened as enrollment expands. Comparing dorm costs
+                      and conditions across major universities also revealed how
+                      affordability limits upgrades and widens inequality
+                      between schools.
+                    </div>
+                    <div class="mb-2">
+                      <span class="tag tag-red">Python</span>
+                      <span class="tag tag-red">Fiddler</span>
+                      <span class="tag tag-green">Fourish</span>
+                      <span class="tag tag-dark">Adobe Illustrator</span>
+                    </div>
+                    <div class="card-meta">
+                      September 2024 · Data scraping · Data Analysis · Data Viz
+                      · Writing
+                    </div>
+                  </div>
+                </a>
 
-          </div><!-- /work-main -->
+                <!-- ══════AI═════════ -->
+                <a
+                  class="project-card"
+                  href="https://www.thepaper.cn/newsDetail_forward_27798791"
+                  target="_blank"
+                >
+                  <div class="card-img-col">
+                    <img
+                      src="img/cover-chineseaipaper.png"
+                      alt="AI Papers in China"
+                    />
+                  </div>
+                  <div class="card-body-custom">
+                    <div class="writing-pub">
+                      The Paper, 澎湃新闻 · July 4, 2024
+                    </div>
+                    <div class="card-title-custom">
+                      What 2.78 Million AI Papers Reveal About China’s Role in
+                      Global Research
+                    </div>
+                    <div class="card-desc">
+                      I examined 2.78 million global AI papers from multiple
+                      academic databases to show that China now leads the world
+                      in both publication volume and citation impact. Chinese
+                      institutions dominate global rankings and Chinese
+                      researchers contribute to most of the world’s highly cited
+                      papers in AI. Yet a large share of that work is conducted
+                      overseas, suggesting China still faces challenges in
+                      retaining top research talent.
+                    </div>
+                    <div class="mb-2">
+                      <span class="tag tag-red">Python</span>
+                      <span class="tag tag-green">Fourish</span>
+                      <span class="tag tag-dark">Adobe Illustrator</span>
+                    </div>
+                    <div class="card-meta">
+                      September 2024 · Data scraping · Data Analysis · Data Viz
+                      · Writing
+                    </div>
+                  </div>
+                </a>
+              </div>
 
-        </div><!-- /col -->
+              <!-- ── More clips ── -->
+              <div class="work-block" id="more-clips">
+                <div class="block-header">
+                  <span class="block-title">More Clips</span>
+                  <!-- <span class="block-count">5 articles</span> -->
+                </div>
+                <div class="writing-grid">
+                  <!-- =======Arbor day =======-->
+                  <a
+                    class="project-card writing-card"
+                    href="https://richmondconfidential.org/2025/10/20/arbor-day-in-richmond-50-volunteers-plant-29-trees/"
+                    target="_blank"
+                  >
+                    <div class="card-img-col">
+                      <img src="img/cover-arbor-day.JPG" alt="Arbor Day" />
+                    </div>
+                    <div class="card-body-custom">
+                      <div class="writing-pub">
+                        Richmond Confidential · October 20, 2025
+                      </div>
+                      <div class="card-title-custom">
+                        Arbor Day in Richmond: 50 volunteers plant 29 trees
+                      </div>
+                      <div class="card-desc">
+                        On Richmond’s 14th annual Arbor Day, about 50 volunteers
+                        joined Groundwork Richmond to plant 29 trees along the
+                        city’s Greenway. The event is part of a five-year plan
+                        to restore green spaces and train local youth in
+                        environmental jobs.
+                      </div>
+                      <div>
+                        <span class="tag tag-dark">Field Reporting</span
+                        ><span class="tag tag-dark">Photography</span
+                        ><span class="tag tag-dark">Public Records</span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!-- writing-grid -->
+              </div>
+              <!-- writing -->
+            </div>
+            <!-- /work-main -->
+          </div>
+          <!-- /col -->
+        </div>
+        <!-- /row -->
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /work-section -->
 
-      </div><!-- /row -->
-
-    </div><!-- /container -->
-
-  </div><!-- /work-section -->
-
-  <!-- ═══════════════════════════════════════
+    <!-- ═══════════════════════════════════════
        More
   ═══════════════════════════════════════ -->
-  <section class="about-section" id="about">
-    <div class="container-fluid px-5">
-      <div class="row g-5 justify-content-center">
-        <div class="col-lg-6">
-          <div class="about-label">// More</div>
-          <h2 class="about-headline">Just...<br> weirdly well-rounded.</h2>
-          <p class="about-body">
-            If you drew a radar chart of my skills, I'd probably look like a hexagon — not the tallest spike anywhere,
-            but pretty solid all around.
-          </p>
-          <p class="about-body">
-            In high school, I used to worry that I had no standout talent. My classmates were math geniuses, literary
-            prodigies, design wizards... I was none of those things. I was just... okay at everything. Not bad at
-            anything, not extraordinary at anything either.
-          </p>
-          <p class="about-body">
-            <span>It took me a while to see that as a feature, not a flaw. Being a generalist means I get to look
-              at the world
-              from a lot of angles at once. </span>I pick things up quickly, and more importantly, I feel excited to use
-            what I
-            learn. The incentive for making things is inherent to me.
-          </p>
-          <p class="about-body">
-            I've been chasing that feeling for a long time. Writing blogs as a kid. Self-taught photography as a
-            teenager. Then data, graphics, code. Each one felt like adding a new lens. The world has so many stories
-            worth telling, so many people worth knowing. <span>I want to spend my life close to that pulse, finding ways
-              to
-              make those stories land.</span>
-          </p>
-          <p class="about-body">
-            I'm not there yet. But I'm getting closer.
-          </p>
-          <ul class="hobby-list">
-            When I'm not working:
-            <li>I play volleyball (there's something about six people working as one to keep a ball
-              off the ground that never bored me).</li>
-            <li>I 'cyber adopt' every cat and dog I see online (future self will have
-              pets).</li>
-            <li>My favorite game is The Legend of Zelda. Open worlds make me feel like anything is possible, exploreing
-              them makes me feel like I'm learning how the world works — which is probably the same reason I became a
-              journalist.</li>
-
-          </ul>
-          <a href="#interactives" class="btn-primary-custom">View My Works</a>
+    <section class="about-section" id="about">
+      <div class="container-fluid px-5">
+        <div class="row g-5 justify-content-center">
+          <div class="col-lg-6">
+            <div class="about-label">// More</div>
+            <h2 class="about-headline">
+              Just...<br />
+              weirdly well-rounded.
+            </h2>
+            <p class="about-body">
+              If you drew a radar chart of my skills, I'd probably look like a
+              hexagon — not the tallest spike anywhere, but pretty solid all
+              around.
+            </p>
+            <p class="about-body">
+              In high school, I used to worry that I had no standout talent. My
+              classmates were math geniuses, literary prodigies, design
+              wizards... I was none of those things. I was just... okay at
+              everything. Not bad at anything, not extraordinary at anything
+              either.
+            </p>
+            <p class="about-body">
+              <span
+                >It took me a while to see that as a feature, not a flaw. Being
+                a generalist means I get to look at the world from a lot of
+                angles at once. </span
+              >I pick things up quickly, and more importantly, I feel excited to
+              use what I learn. The incentive for making things is inherent to
+              me.
+            </p>
+            <p class="about-body">
+              I've been chasing that feeling for a long time. Writing blogs as a
+              kid. Self-taught photography as a teenager. Then data, graphics,
+              code. Each one felt like adding a new lens. The world has so many
+              stories worth telling, so many people worth knowing.
+              <span
+                >I want to spend my life close to that pulse, finding ways to
+                make those stories land.</span
+              >
+            </p>
+            <p class="about-body">I'm not there yet. But I'm getting closer.</p>
+            <ul class="hobby-list">
+              When I'm not working:
+              <li>
+                I play volleyball (there's something about six people working as
+                one to keep a ball off the ground that never bored me).
+              </li>
+              <li>
+                I 'cyber adopt' every cat and dog I see online (future self will
+                have pets).
+              </li>
+              <li>
+                My favorite game is The Legend of Zelda. Open worlds make me
+                feel like anything is possible, exploreing them makes me feel
+                like I'm learning how the world works — which is probably the
+                same reason I became a journalist.
+              </li>
+            </ul>
+            <a href="#interactives" class="btn-primary-custom">View My Works</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ═══════════════════════════════════════
+    <!-- ═══════════════════════════════════════
        FOOTER
   ═══════════════════════════════════════ -->
-  <footer class="site-footer">
-    <div class="container-fluid px-5 d-flex justify-content-between align-items-center">
-      <div class="footer-copy">&copy; 2026 <span>Yaelle Tang</span></div>
-      <div>
-        <a class="footer-link" href="mailto:yueyang_tang@berkeley.edu">Email</a>
-        <a class="footer-link" href="https://www.linkedin.com/in/yaelle-yueyang-tang" target="_blank">LinkedIn</a>
-        <a class="footer-link" href="https://github.com/Yaelle-Tang  " target="_blank">GitHub</a>
-        <a class="footer-link" href="https://www.instagram.com/yaelle_tyy/ " target="_blank">Instagram</a>
+    <footer class="site-footer">
+      <div
+        class="container-fluid px-5 d-flex justify-content-between align-items-center"
+      >
+        <div class="footer-copy">&copy; 2026 <span>Yaelle Tang</span></div>
+        <div>
+          <a class="footer-link" href="mailto:yueyang_tang@berkeley.edu"
+            >Email</a
+          >
+          <a
+            class="footer-link"
+            href="https://www.linkedin.com/in/yaelle-yueyang-tang"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a
+            class="footer-link"
+            href="https://github.com/Yaelle-Tang  "
+            target="_blank"
+            >GitHub</a
+          >
+          <a
+            class="footer-link"
+            href="https://www.instagram.com/yaelle_tyy/ "
+            target="_blank"
+            >Instagram</a
+          >
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
-  <script src="js/main.js"></script>
-
-</body>
-
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+  </body>
 </html>
